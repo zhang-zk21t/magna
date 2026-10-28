@@ -13,6 +13,10 @@ based on the final head of [upstream PR #5](https://github.com/itpyi/magna/pull/
 `5a0e201b420c09625f77c59889bbc60b6ed8a478`. The CUDA kernels are unchanged.
 The evidence and report were added after the measured implementation commit.
 
+The subsequent [eight-GPU experiment](eight-gpu-benchmark-20261028.md) repeats
+the single- and four-GPU baselines while adding eight GPUs. The measurements
+below remain the original four-GPU session.
+
 ## Results
 
 Throughput counts attempted Monte Carlo draws, including rejected draws; it is

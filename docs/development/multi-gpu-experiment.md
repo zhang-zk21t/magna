@@ -25,8 +25,9 @@ The implementation supports one host, static splitting and the task subset of #5
 
 ## Initial server preflight on 2026-10-28
 
-At the initial preflight, only read-only SSH inspection was performed on `ghz`. Contrary to the expected
-eight devices, `nvidia-smi` enumerated nine RTX 4090 GPUs, indices 0 through 8.
+At the initial preflight, only read-only SSH inspection was performed on `ghz`.
+Contrary to the expected eight devices, `nvidia-smi` enumerated nine RTX 4090 GPUs,
+indices 0 through 8.
 GPU 0 reported 492 MiB used; the compute-process query reported PID 866579 using
 482 MiB, even though device utilization was 0% and the default process table was
 empty. The other eight devices reported 2 MiB and 0% utilization. The host's load
@@ -40,8 +41,10 @@ was made to use the remaining idle devices or terminate the existing process.
 The user subsequently authorized experiments on the idle devices and requested
 four GPUs first. The [four-GPU experiment report](four-gpu-benchmark-20261028.md)
 records successful real-device correctness tests and direct-single-GPU versus
-four-GPU measurements on physical GPUs 1 through 4. Two- and eight-GPU scaling
-remain unmeasured. The initial skip above describes the earlier preflight only.
+four-GPU measurements on physical GPUs 1 through 4. The subsequent
+[eight-GPU report](eight-gpu-benchmark-20261028.md) adds interleaved 1/4/8-device
+measurements on physical GPUs 1 through 8. Two-GPU scaling remains unmeasured.
+The initial skip above describes the earlier preflight only.
 
 ## Local validation
 

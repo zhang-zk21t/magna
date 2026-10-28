@@ -1,0 +1,5231 @@
+{
+  "status": "complete",
+  "source_commit": "d128490e3c1ecef10379d5969a9d9b378af3bb07",
+  "driver_sha256": "0336febd9e4698a4ab417d5e1ea7ecdb6d15bfd7e9706982917b9fa111297810",
+  "reference_sha256": "c79c76b6b516ae262d3631391f52f75b2c7bda5e48a02712cfd65b4f61b031dd",
+  "timestamp": "2026-10-28T04:29:06.591945+00:00",
+  "python": "3.13.5",
+  "platform": "Linux-5.15.0-187-generic-x86_64-with-glibc2.35",
+  "selected_gpu_uuids": [
+    "GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f",
+    "GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34",
+    "GPU-25f53d69-f560-09f7-175b-09f973b4e12a",
+    "GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95",
+    "GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d",
+    "GPU-747a9db3-132e-7612-72bf-eff539d02fe9",
+    "GPU-d3877180-08d1-ba1e-02ef-a78253f531bd",
+    "GPU-c5f989b3-f417-19a2-1a18-562f041a2e05"
+  ],
+  "initial_inventory": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 14.64 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 29, 20.08 W, 210 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 28, 20.62 W, 210 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 28, 12.90 W, 210 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 29, 13.26 W, 210 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 28, 22.42 W, 210 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 27, 23.53 W, 210 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 30, 24.83 W, 210 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 29, 21.19 W, 210 MHz",
+  "initial_load": [
+    150.88720703125,
+    149.30322265625,
+    149.021484375
+  ],
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127
+  ],
+  "batch_size": 65536,
+  "repeats": 5,
+  "tasks": [
+    {
+      "task": "bh2-T",
+      "shots": 134217728,
+      "sampling": {
+        "method": "importance",
+        "proposal_scale": "1000/7"
+      },
+      "initial_inventory": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 14.26 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 29, 20.05 W, 210 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 28, 20.66 W, 210 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 28, 13.22 W, 210 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 29, 13.10 W, 210 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 28, 22.38 W, 210 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 27, 23.36 W, 210 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 30, 24.92 W, 210 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 29, 22.02 W, 210 MHz",
+      "load_before": [
+        150.88720703125,
+        149.30322265625,
+        149.021484375
+      ],
+      "first_calls": {
+        "single": {
+          "seconds": 0.2993016541004181,
+          "result": {
+            "status": "complete",
+            "requested": 524288,
+            "completed": 524288,
+            "seed": 7,
+            "offset": 0,
+            "batch_size": 65536,
+            "timings": {
+              "sampling_seconds": 0.2992312554270029
+            },
+            "estimates": {
+              "acceptance": 0.9887510875873257,
+              "error": 6.9762382934922575e-06,
+              "conditional_error": 7.0556061895366785e-06
+            },
+            "standard_errors": {
+              "acceptance": 0.0037722883505390504,
+              "error": 6.301859300542208e-08,
+              "conditional_error": 7.054554395771448e-08
+            }
+          }
+        },
+        "four": {
+          "seconds": 2.207233788445592,
+          "result": {
+            "status": "complete",
+            "requested": 524288,
+            "completed": 524288,
+            "seed": 7,
+            "offset": 0,
+            "batch_size": 65536,
+            "devices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "shards": [
+              {
+                "device": 0,
+                "offset": 0,
+                "shots": 131072,
+                "sampling_seconds": 0.476790982298553
+              },
+              {
+                "device": 1,
+                "offset": 131072,
+                "shots": 131072,
+                "sampling_seconds": 0.1370505392551422
+              },
+              {
+                "device": 2,
+                "offset": 262144,
+                "shots": 131072,
+                "sampling_seconds": 0.2281915470957756
+              },
+              {
+                "device": 3,
+                "offset": 393216,
+                "shots": 131072,
+                "sampling_seconds": 0.23021005000919104
+              }
+            ],
+            "timings": {
+              "total_seconds": 2.2070916909724474,
+              "startup_seconds": 1.7294066101312637,
+              "sampling_seconds": 0.47768508084118366
+            },
+            "estimates": {
+              "acceptance": 0.9887510875873257,
+              "error": 6.9762382934922575e-06,
+              "conditional_error": 7.0556061895366785e-06
+            },
+            "standard_errors": {
+              "acceptance": 0.003772288350539051,
+              "error": 6.301859300542207e-08,
+              "conditional_error": 7.054554395771446e-08
+            }
+          }
+        },
+        "eight": {
+          "seconds": 3.407313410192728,
+          "result": {
+            "status": "complete",
+            "requested": 524288,
+            "completed": 524288,
+            "seed": 7,
+            "offset": 0,
+            "batch_size": 65536,
+            "devices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "shards": [
+              {
+                "device": 0,
+                "offset": 0,
+                "shots": 65536,
+                "sampling_seconds": 0.5092545077204704
+              },
+              {
+                "device": 1,
+                "offset": 65536,
+                "shots": 65536,
+                "sampling_seconds": 0.10543920006603003
+              },
+              {
+                "device": 2,
+                "offset": 131072,
+                "shots": 65536,
+                "sampling_seconds": 0.2178568560630083
+              },
+              {
+                "device": 3,
+                "offset": 196608,
+                "shots": 65536,
+                "sampling_seconds": 0.24230158049613237
+              },
+              {
+                "device": 4,
+                "offset": 262144,
+                "shots": 65536,
+                "sampling_seconds": 0.24793885368853807
+              },
+              {
+                "device": 5,
+                "offset": 327680,
+                "shots": 65536,
+                "sampling_seconds": 0.1433760430663824
+              },
+              {
+                "device": 6,
+                "offset": 393216,
+                "shots": 65536,
+                "sampling_seconds": 0.243764016777277
+              },
+              {
+                "device": 7,
+                "offset": 458752,
+                "shots": 65536,
+                "sampling_seconds": 0.2803435567766428
+              }
+            ],
+            "timings": {
+              "total_seconds": 3.4071980845183134,
+              "startup_seconds": 2.8969625579193234,
+              "sampling_seconds": 0.51023552659899
+            },
+            "estimates": {
+              "acceptance": 0.9887510875873257,
+              "error": 6.9762382934922575e-06,
+              "conditional_error": 7.0556061895366785e-06
+            },
+            "standard_errors": {
+              "acceptance": 0.0037722883505390504,
+              "error": 6.301859300542208e-08,
+              "conditional_error": 7.054554395771448e-08
+            }
+          }
+        }
+      },
+      "rounds": [
+        {
+          "seed": 20261028,
+          "order": [
+            "single",
+            "four",
+            "eight"
+          ],
+          "load": [
+            150.89501953125,
+            149.34521484375,
+            149.03759765625
+          ],
+          "single": {
+            "wall_seconds": 1.096156126819551,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261028,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 1.0960871651768684
+              },
+              "estimates": {
+                "acceptance": 0.9863177754617924,
+                "error": 6.975970539284271e-06,
+                "conditional_error": 7.072741374875995e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.00023551547079473935,
+                "error": 3.938489442024757e-09,
+                "conditional_error": 4.420681647143706e-09
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.3448821781203151,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261028,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.27681221812963486
+                },
+                {
+                  "device": 1,
+                  "offset": 33554432,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.26901870034635067
+                },
+                {
+                  "device": 2,
+                  "offset": 67108864,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.34226758405566216
+                },
+                {
+                  "device": 3,
+                  "offset": 100663296,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.2616222305223346
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.3444951232522726,
+                "startup_seconds": 3.7690624594688416e-05,
+                "sampling_seconds": 0.3444574326276779
+              },
+              "estimates": {
+                "acceptance": 0.9863177754617929,
+                "error": 6.975970539284272e-06,
+                "conditional_error": 7.072741374875993e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.00023551547079473856,
+                "error": 3.93848944202475e-09,
+                "conditional_error": 4.420681647143695e-09
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.32604872435331345,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261028,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.22604633308947086
+                },
+                {
+                  "device": 1,
+                  "offset": 16777216,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.23314111959189177
+                },
+                {
+                  "device": 2,
+                  "offset": 33554432,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.2214164463803172
+                },
+                {
+                  "device": 3,
+                  "offset": 50331648,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.3242845628410578
+                },
+                {
+                  "device": 4,
+                  "offset": 67108864,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.12032521422952414
+                },
+                {
+                  "device": 5,
+                  "offset": 83886080,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.31495633348822594
+                },
+                {
+                  "device": 6,
+                  "offset": 100663296,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.3010689252987504
+                },
+                {
+                  "device": 7,
+                  "offset": 117440512,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.21608846355229616
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.3259600196033716,
+                "startup_seconds": 6.643123924732208e-06,
+                "sampling_seconds": 0.3259533764794469
+              },
+              "estimates": {
+                "acceptance": 0.9863177754617929,
+                "error": 6.975970539284272e-06,
+                "conditional_error": 7.072741374875993e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.00023551547079473842,
+                "error": 3.9384894420247505e-09,
+                "conditional_error": 4.420681647143695e-09
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 4.440892098500626e-16,
+                "error": 8.470329472543003e-22,
+                "conditional_error": 2.541098841762901e-21
+              },
+              "standard_errors": {
+                "acceptance": 7.860465750519907e-19,
+                "error": 7.444625512977249e-24,
+                "conditional_error": 1.1580528575742387e-23
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 4.440892098500626e-16,
+                "error": 8.470329472543003e-22,
+                "conditional_error": 2.541098841762901e-21
+              },
+              "standard_errors": {
+                "acceptance": 9.215718466126788e-19,
+                "error": 6.617444900424222e-24,
+                "conditional_error": 1.1580528575742387e-23
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 16.17 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 6 %, 1274 MiB, 32, 102.97 W, 2745 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 851 MiB, 30, 90.33 W, 2610 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 10 %, 851 MiB, 31, 88.03 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 14 %, 851 MiB, 31, 93.33 W, 2805 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 30, 69.17 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 10 %, 428 MiB, 29, 76.92 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 32, 76.85 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 31, 67.11 W, 2520 MHz"
+        },
+        {
+          "seed": 20261029,
+          "order": [
+            "four",
+            "eight",
+            "single"
+          ],
+          "load": [
+            150.89501953125,
+            149.34521484375,
+            149.03759765625
+          ],
+          "four": {
+            "wall_seconds": 0.4883174169808626,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261029,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.47847304213792086
+                },
+                {
+                  "device": 1,
+                  "offset": 33554432,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.48733867052942514
+                },
+                {
+                  "device": 2,
+                  "offset": 67108864,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.34106788504868746
+                },
+                {
+                  "device": 3,
+                  "offset": 100663296,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.27875908091664314
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.4882438639178872,
+                "startup_seconds": 7.58003443479538e-06,
+                "sampling_seconds": 0.4882362838834524
+              },
+              "estimates": {
+                "acceptance": 0.9861348370812324,
+                "error": 6.974723134427875e-06,
+                "conditional_error": 7.072788499260102e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.00023549648230261427,
+                "error": 3.938146537054888e-09,
+                "conditional_error": 4.421109753727544e-09
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.31659027095884085,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261029,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.23465784266591072
+                },
+                {
+                  "device": 1,
+                  "offset": 16777216,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.2292994512245059
+                },
+                {
+                  "device": 2,
+                  "offset": 33554432,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.22236239165067673
+                },
+                {
+                  "device": 3,
+                  "offset": 50331648,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.2654584012925625
+                },
+                {
+                  "device": 4,
+                  "offset": 67108864,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.16580606065690517
+                },
+                {
+                  "device": 5,
+                  "offset": 83886080,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.3064793637022376
+                },
+                {
+                  "device": 6,
+                  "offset": 100663296,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.2710852213203907
+                },
+                {
+                  "device": 7,
+                  "offset": 117440512,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.205131022259593
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.31650943122804165,
+                "startup_seconds": 7.216818630695343e-06,
+                "sampling_seconds": 0.31650221440941095
+              },
+              "estimates": {
+                "acceptance": 0.9861348370812328,
+                "error": 6.974723134427878e-06,
+                "conditional_error": 7.072788499260102e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.00023549648230261435,
+                "error": 3.938146537054889e-09,
+                "conditional_error": 4.421109753727543e-09
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 1.0014651082456112,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261029,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 1.0013831881806254
+              },
+              "estimates": {
+                "acceptance": 0.986134837081232,
+                "error": 6.974723134427881e-06,
+                "conditional_error": 7.072788499260111e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.000235496482302614,
+                "error": 3.938146537054896e-09,
+                "conditional_error": 4.4211097537275535e-09
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 4.440892098500626e-16,
+                "error": 5.929230630780102e-21,
+                "conditional_error": 9.317362419797304e-21
+              },
+              "standard_errors": {
+                "acceptance": 2.710505431213761e-19,
+                "error": 8.271806125530277e-24,
+                "conditional_error": 9.926167350636332e-24
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 8.881784197001252e-16,
+                "error": 3.3881317890172014e-21,
+                "conditional_error": 9.317362419797304e-21
+              },
+              "standard_errors": {
+                "acceptance": 3.5236570605778894e-19,
+                "error": 7.444625512977249e-24,
+                "conditional_error": 1.075334796318936e-23
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 16.12 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 6 %, 1274 MiB, 33, 160.15 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 851 MiB, 30, 69.90 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 851 MiB, 31, 64.92 W, 2520 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 851 MiB, 31, 81.74 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 30, 70.67 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 29, 78.56 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 32, 72.01 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 31, 70.13 W, 2520 MHz"
+        },
+        {
+          "seed": 20261030,
+          "order": [
+            "eight",
+            "single",
+            "four"
+          ],
+          "load": [
+            150.8232421875,
+            149.3564453125,
+            149.04296875
+          ],
+          "eight": {
+            "wall_seconds": 0.2608679048717022,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261030,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1846234230324626
+                },
+                {
+                  "device": 1,
+                  "offset": 16777216,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1558497380465269
+                },
+                {
+                  "device": 2,
+                  "offset": 33554432,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.20807641558349133
+                },
+                {
+                  "device": 3,
+                  "offset": 50331648,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.22206034697592258
+                },
+                {
+                  "device": 4,
+                  "offset": 67108864,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1481756055727601
+                },
+                {
+                  "device": 5,
+                  "offset": 83886080,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.2584610106423497
+                },
+                {
+                  "device": 6,
+                  "offset": 100663296,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.19036884512752295
+                },
+                {
+                  "device": 7,
+                  "offset": 117440512,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.119477110914886
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.2603532997891307,
+                "startup_seconds": 2.6736408472061157e-05,
+                "sampling_seconds": 0.2603265633806586
+              },
+              "estimates": {
+                "acceptance": 0.9858511806425567,
+                "error": 6.97575789738101e-06,
+                "conditional_error": 7.075873148353244e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.0002354670340351219,
+                "error": 3.938420176379719e-09,
+                "conditional_error": 4.42285832835791e-09
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 1.0058195674791932,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261030,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 1.005548994988203
+              },
+              "estimates": {
+                "acceptance": 0.9858511806425561,
+                "error": 6.975757897381008e-06,
+                "conditional_error": 7.0758731483532465e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.00023546703403512276,
+                "error": 3.93842017637973e-09,
+                "conditional_error": 4.422858328357925e-09
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.5515692979097366,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261030,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.3277570027858019
+                },
+                {
+                  "device": 1,
+                  "offset": 33554432,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.5499228900298476
+                },
+                {
+                  "device": 2,
+                  "offset": 67108864,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.32977157179266214
+                },
+                {
+                  "device": 3,
+                  "offset": 100663296,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.4073992595076561
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.5512471683323383,
+                "startup_seconds": 2.3533590137958527e-05,
+                "sampling_seconds": 0.5512236347422004
+              },
+              "estimates": {
+                "acceptance": 0.9858511806425567,
+                "error": 6.97575789738101e-06,
+                "conditional_error": 7.075873148353244e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.0002354670340351218,
+                "error": 3.938420176379718e-09,
+                "conditional_error": 4.422858328357909e-09
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 6.661338147750939e-16,
+                "error": 1.6940658945086007e-21,
+                "conditional_error": 2.541098841762901e-21
+              },
+              "standard_errors": {
+                "acceptance": 9.486769009248164e-19,
+                "error": 1.1580528575742387e-23,
+                "conditional_error": 1.5716431638507526e-23
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 6.661338147750939e-16,
+                "error": 1.6940658945086007e-21,
+                "conditional_error": 2.541098841762901e-21
+              },
+              "standard_errors": {
+                "acceptance": 8.673617379884035e-19,
+                "error": 1.075334796318936e-23,
+                "conditional_error": 1.4889251025954498e-23
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 16.61 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1274 MiB, 33, 107.51 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 30 %, 851 MiB, 31, 79.50 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 851 MiB, 32, 73.08 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 851 MiB, 31, 72.36 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 30, 63.36 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 29, 70.54 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 32, 66.51 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 31, 61.53 W, 2520 MHz"
+        },
+        {
+          "seed": 20261031,
+          "order": [
+            "single",
+            "four",
+            "eight"
+          ],
+          "load": [
+            150.8232421875,
+            149.3564453125,
+            149.04296875
+          ],
+          "single": {
+            "wall_seconds": 1.3709837282076478,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261031,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 1.3709056777879596
+              },
+              "estimates": {
+                "acceptance": 0.9864194442786655,
+                "error": 6.970656064978621e-06,
+                "conditional_error": 7.066624756242535e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.00023552602342495952,
+                "error": 3.9370024640852305e-09,
+                "conditional_error": 4.418206983300349e-09
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.42100166343152523,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261031,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.28249930310994387
+                },
+                {
+                  "device": 1,
+                  "offset": 33554432,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.41966012492775917
+                },
+                {
+                  "device": 2,
+                  "offset": 67108864,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.3882012255489826
+                },
+                {
+                  "device": 3,
+                  "offset": 100663296,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.24549962766468525
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.420851550064981,
+                "startup_seconds": 1.0213814675807953e-05,
+                "sampling_seconds": 0.4208413362503052
+              },
+              "estimates": {
+                "acceptance": 0.986419444278666,
+                "error": 6.970656064978615e-06,
+                "conditional_error": 7.066624756242525e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.00023552602342495922,
+                "error": 3.937002464085234e-09,
+                "conditional_error": 4.418206983300348e-09
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.2625413900241256,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261031,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.2195424810051918
+                },
+                {
+                  "device": 1,
+                  "offset": 16777216,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.22421845048666
+                },
+                {
+                  "device": 2,
+                  "offset": 33554432,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.21098848432302475
+                },
+                {
+                  "device": 3,
+                  "offset": 50331648,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.19784140028059483
+                },
+                {
+                  "device": 4,
+                  "offset": 67108864,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.21390540525317192
+                },
+                {
+                  "device": 5,
+                  "offset": 83886080,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.2611534558236599
+                },
+                {
+                  "device": 6,
+                  "offset": 100663296,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.21668744832277298
+                },
+                {
+                  "device": 7,
+                  "offset": 117440512,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.22501900419592857
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.2622651383280754,
+                "startup_seconds": 1.3793818652629852e-05,
+                "sampling_seconds": 0.2622513445094228
+              },
+              "estimates": {
+                "acceptance": 0.9864194442786661,
+                "error": 6.970656064978614e-06,
+                "conditional_error": 7.066624756242523e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.00023552602342495922,
+                "error": 3.937002464085235e-09,
+                "conditional_error": 4.4182069833003485e-09
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 5.551115123125783e-16,
+                "error": 5.929230630780102e-21,
+                "conditional_error": 1.0164395367051604e-20
+              },
+              "standard_errors": {
+                "acceptance": 2.981555974335137e-19,
+                "error": 3.308722450212111e-24,
+                "conditional_error": 1.6543612251060553e-24
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 6.661338147750939e-16,
+                "error": 6.776263578034403e-21,
+                "conditional_error": 1.1858461261560205e-20
+              },
+              "standard_errors": {
+                "acceptance": 2.981555974335137e-19,
+                "error": 4.1359030627651384e-24,
+                "conditional_error": 8.271806125530277e-25
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 16.08 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 22 %, 1274 MiB, 34, 98.10 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 33 %, 851 MiB, 31, 87.28 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 34 %, 851 MiB, 32, 89.50 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 20 %, 851 MiB, 32, 91.66 W, 2805 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 13 %, 428 MiB, 31, 69.64 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 19 %, 428 MiB, 30, 78.38 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 36 %, 428 MiB, 32, 72.62 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 1 %, 428 MiB, 32, 67.88 W, 2520 MHz"
+        },
+        {
+          "seed": 20261032,
+          "order": [
+            "four",
+            "eight",
+            "single"
+          ],
+          "load": [
+            151.23779296875,
+            149.466796875,
+            149.08056640625
+          ],
+          "four": {
+            "wall_seconds": 0.4301369357854128,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261032,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.4066741028800607
+                },
+                {
+                  "device": 1,
+                  "offset": 33554432,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.4143217643722892
+                },
+                {
+                  "device": 2,
+                  "offset": 67108864,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.4292683592066169
+                },
+                {
+                  "device": 3,
+                  "offset": 100663296,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.3799879299476743
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.43006587866693735,
+                "startup_seconds": 6.463378667831421e-06,
+                "sampling_seconds": 0.4300594152882695
+              },
+              "estimates": {
+                "acceptance": 0.9861312746149921,
+                "error": 6.97307702712088e-06,
+                "conditional_error": 7.071144792404365e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.00023549611272182373,
+                "error": 3.937672040538095e-09,
+                "conditional_error": 4.420500342005022e-09
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.2696380987763405,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261032,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.23250894900411367
+                },
+                {
+                  "device": 1,
+                  "offset": 16777216,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.22977127972990274
+                },
+                {
+                  "device": 2,
+                  "offset": 33554432,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.26856864523142576
+                },
+                {
+                  "device": 3,
+                  "offset": 50331648,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.24143029376864433
+                },
+                {
+                  "device": 4,
+                  "offset": 67108864,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.17022274900227785
+                },
+                {
+                  "device": 5,
+                  "offset": 83886080,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1924900384619832
+                },
+                {
+                  "device": 6,
+                  "offset": 100663296,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.23751901276409626
+                },
+                {
+                  "device": 7,
+                  "offset": 117440512,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.23611375968903303
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.2695511672645807,
+                "startup_seconds": 6.397254765033722e-06,
+                "sampling_seconds": 0.2695447700098157
+              },
+              "estimates": {
+                "acceptance": 0.9861312746149924,
+                "error": 6.973077027120878e-06,
+                "conditional_error": 7.0711447924043615e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.00023549611272182376,
+                "error": 3.937672040538095e-09,
+                "conditional_error": 4.420500342005021e-09
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 0.9675098424777389,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261032,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 0.9672713540494442
+              },
+              "estimates": {
+                "acceptance": 0.986131274614992,
+                "error": 6.9730770271208834e-06,
+                "conditional_error": 7.071144792404369e-06
+              },
+              "standard_errors": {
+                "acceptance": 0.0002354961127218233,
+                "error": 3.9376720405380935e-09,
+                "conditional_error": 4.420500342005021e-09
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 1.1102230246251565e-16,
+                "error": 3.3881317890172014e-21,
+                "conditional_error": 4.235164736271502e-21
+              },
+              "standard_errors": {
+                "acceptance": 4.336808689942018e-19,
+                "error": 1.6543612251060553e-24,
+                "conditional_error": 8.271806125530277e-25
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 4.440892098500626e-16,
+                "error": 5.082197683525802e-21,
+                "conditional_error": 7.623296525288703e-21
+              },
+              "standard_errors": {
+                "acceptance": 4.607859233063394e-19,
+                "error": 1.6543612251060553e-24,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 15.95 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 45 %, 1274 MiB, 34, 164.64 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 851 MiB, 31, 68.88 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 851 MiB, 32, 61.30 W, 2520 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 851 MiB, 32, 63.45 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 31, 68.26 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 30, 78.77 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 32, 71.84 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 428 MiB, 32, 69.68 W, 2520 MHz"
+        }
+      ],
+      "worker_pids": [
+        3489494,
+        3489582,
+        3489583,
+        3489584,
+        3489585,
+        3489640,
+        3489642,
+        3489644,
+        3489645,
+        3489646,
+        3489648,
+        3489649,
+        3489652
+      ],
+      "single": {
+        "median_seconds": 1.0058195674791932,
+        "min_seconds": 0.9675098424777389,
+        "max_seconds": 1.3709837282076478,
+        "shots_per_second": 133441158.17549601
+      },
+      "four": {
+        "median_seconds": 0.4301369357854128,
+        "min_seconds": 0.3448821781203151,
+        "max_seconds": 0.5515692979097366,
+        "shots_per_second": 312034881.9961806
+      },
+      "eight": {
+        "median_seconds": 0.2696380987763405,
+        "min_seconds": 0.2608679048717022,
+        "max_seconds": 0.32604872435331345,
+        "shots_per_second": 497769894.5701697
+      },
+      "four_over_single": 2.338370606659498,
+      "eight_over_single": 3.7302576009983692,
+      "eight_over_four": 1.5952379791188298,
+      "load_after": [
+        152.02001953125,
+        149.65869140625,
+        149.14501953125
+      ]
+    },
+    {
+      "task": "bh100-T",
+      "shots": 13369344,
+      "sampling": {
+        "method": "importance",
+        "proposal_scale": "500/77"
+      },
+      "initial_inventory": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 14.79 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 394 MiB, 33, 60.70 W, 2520 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 30, 61.25 W, 540 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 31, 56.96 W, 540 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 31, 39.90 W, 480 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 30, 25.25 W, 255 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 28, 28.01 W, 210 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 31, 26.85 W, 210 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 30, 21.40 W, 210 MHz",
+      "load_before": [
+        153.1396484375,
+        149.93017578125,
+        149.23583984375
+      ],
+      "first_calls": {
+        "single": {
+          "seconds": 0.11413936875760555,
+          "result": {
+            "status": "complete",
+            "requested": 524288,
+            "completed": 524288,
+            "seed": 7,
+            "offset": 0,
+            "batch_size": 65536,
+            "timings": {
+              "sampling_seconds": 0.11403214558959007
+            },
+            "estimates": {
+              "acceptance": 0.7493678265952204,
+              "error": 0.011672355128261527,
+              "conditional_error": 0.015576269375341735
+            },
+            "standard_errors": {
+              "acceptance": 0.0025731566466386914,
+              "error": 4.9236939064289594e-05,
+              "conditional_error": 8.918743364452545e-05
+            }
+          }
+        },
+        "four": {
+          "seconds": 4.316930748522282,
+          "result": {
+            "status": "complete",
+            "requested": 524288,
+            "completed": 524288,
+            "seed": 7,
+            "offset": 0,
+            "batch_size": 65536,
+            "devices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "shards": [
+              {
+                "device": 0,
+                "offset": 0,
+                "shots": 131072,
+                "sampling_seconds": 0.4207426644861698
+              },
+              {
+                "device": 1,
+                "offset": 131072,
+                "shots": 131072,
+                "sampling_seconds": 0.19093169178813696
+              },
+              {
+                "device": 2,
+                "offset": 262144,
+                "shots": 131072,
+                "sampling_seconds": 0.19495181366801262
+              },
+              {
+                "device": 3,
+                "offset": 393216,
+                "shots": 131072,
+                "sampling_seconds": 0.12095321621745825
+              }
+            ],
+            "timings": {
+              "total_seconds": 4.316831260919571,
+              "startup_seconds": 3.8945434652268887,
+              "sampling_seconds": 0.42228779569268227
+            },
+            "estimates": {
+              "acceptance": 0.7493678265952205,
+              "error": 0.011672355128261527,
+              "conditional_error": 0.015576269375341732
+            },
+            "standard_errors": {
+              "acceptance": 0.0025731566466386923,
+              "error": 4.9236939064289594e-05,
+              "conditional_error": 8.918743364452544e-05
+            }
+          }
+        },
+        "eight": {
+          "seconds": 5.1231053145602345,
+          "result": {
+            "status": "complete",
+            "requested": 524288,
+            "completed": 524288,
+            "seed": 7,
+            "offset": 0,
+            "batch_size": 65536,
+            "devices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "shards": [
+              {
+                "device": 0,
+                "offset": 0,
+                "shots": 65536,
+                "sampling_seconds": 0.41771821957081556
+              },
+              {
+                "device": 1,
+                "offset": 65536,
+                "shots": 65536,
+                "sampling_seconds": 0.250789949670434
+              },
+              {
+                "device": 2,
+                "offset": 131072,
+                "shots": 65536,
+                "sampling_seconds": 0.27078033052384853
+              },
+              {
+                "device": 3,
+                "offset": 196608,
+                "shots": 65536,
+                "sampling_seconds": 0.2291960110887885
+              },
+              {
+                "device": 4,
+                "offset": 262144,
+                "shots": 65536,
+                "sampling_seconds": 0.2615954941138625
+              },
+              {
+                "device": 5,
+                "offset": 327680,
+                "shots": 65536,
+                "sampling_seconds": 0.2371214684098959
+              },
+              {
+                "device": 6,
+                "offset": 393216,
+                "shots": 65536,
+                "sampling_seconds": 0.233760935254395
+              },
+              {
+                "device": 7,
+                "offset": 458752,
+                "shots": 65536,
+                "sampling_seconds": 0.23706495948135853
+              }
+            ],
+            "timings": {
+              "total_seconds": 5.1230084812268615,
+              "startup_seconds": 4.7041025990620255,
+              "sampling_seconds": 0.41890588216483593
+            },
+            "estimates": {
+              "acceptance": 0.7493678265952204,
+              "error": 0.011672355128261527,
+              "conditional_error": 0.015576269375341735
+            },
+            "standard_errors": {
+              "acceptance": 0.0025731566466386914,
+              "error": 4.9236939064289594e-05,
+              "conditional_error": 8.918743364452545e-05
+            }
+          }
+        }
+      },
+      "rounds": [
+        {
+          "seed": 20261028,
+          "order": [
+            "four",
+            "eight",
+            "single"
+          ],
+          "load": [
+            151.6640625,
+            149.73193359375,
+            149.1796875
+          ],
+          "four": {
+            "wall_seconds": 0.643618899397552,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261028,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.46124137099832296
+                },
+                {
+                  "device": 1,
+                  "offset": 3342336,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.6423196010291576
+                },
+                {
+                  "device": 2,
+                  "offset": 6684672,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.5797581160441041
+                },
+                {
+                  "device": 3,
+                  "offset": 10027008,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.4544793227687478
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.6434999192133546,
+                "startup_seconds": 7.94045627117157e-06,
+                "sampling_seconds": 0.6434919787570834
+              },
+              "estimates": {
+                "acceptance": 0.7464465489008129,
+                "error": 0.011730819933323377,
+                "conditional_error": 0.01571555250754084
+              },
+              "standard_errors": {
+                "acceptance": 0.000508685831379762,
+                "error": 9.775195986387015e-06,
+                "conditional_error": 1.7809303051278637e-05
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.4188789203763008,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261028,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.2295077219605446
+                },
+                {
+                  "device": 1,
+                  "offset": 1671168,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.2295017819851637
+                },
+                {
+                  "device": 2,
+                  "offset": 3342336,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.3495159540325403
+                },
+                {
+                  "device": 3,
+                  "offset": 5013504,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.37985919136554
+                },
+                {
+                  "device": 4,
+                  "offset": 6684672,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.39149261079728603
+                },
+                {
+                  "device": 5,
+                  "offset": 8355840,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.3565851077437401
+                },
+                {
+                  "device": 6,
+                  "offset": 10027008,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.39737206045538187
+                },
+                {
+                  "device": 7,
+                  "offset": 11698176,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.35088787507265806
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.4187763463705778,
+                "startup_seconds": 8.25151801109314e-06,
+                "sampling_seconds": 0.4187680948525667
+              },
+              "estimates": {
+                "acceptance": 0.746446548900813,
+                "error": 0.011730819933323377,
+                "conditional_error": 0.01571555250754084
+              },
+              "standard_errors": {
+                "acceptance": 0.000508685831379762,
+                "error": 9.775195986387013e-06,
+                "conditional_error": 1.780930305127863e-05
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 1.8397708516567945,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261028,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 1.8396524703130126
+              },
+              "estimates": {
+                "acceptance": 0.746446548900813,
+                "error": 0.01173081993332338,
+                "conditional_error": 0.015715552507540843
+              },
+              "standard_errors": {
+                "acceptance": 0.0005086858313797626,
+                "error": 9.775195986387005e-06,
+                "conditional_error": 1.7809303051278637e-05
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 1.1102230246251565e-16,
+                "error": 3.469446951953614e-18,
+                "conditional_error": 3.469446951953614e-18
+              },
+              "standard_errors": {
+                "acceptance": 6.505213034913027e-19,
+                "error": 1.0164395367051604e-20,
+                "conditional_error": 0.0
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 0.0,
+                "error": 3.469446951953614e-18,
+                "conditional_error": 3.469446951953614e-18
+              },
+              "standard_errors": {
+                "acceptance": 6.505213034913027e-19,
+                "error": 8.470329472543003e-21,
+                "conditional_error": 6.776263578034403e-21
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 14.24 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 95 %, 3764 MiB, 36, 229.60 W, 2745 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2511 MiB, 32, 70.47 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2511 MiB, 32, 62.71 W, 2520 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2511 MiB, 32, 72.08 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 31, 71.21 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 30, 75.98 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 33, 75.16 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 32, 71.06 W, 2520 MHz"
+        },
+        {
+          "seed": 20261029,
+          "order": [
+            "eight",
+            "single",
+            "four"
+          ],
+          "load": [
+            150.16943359375,
+            149.4541015625,
+            149.0927734375
+          ],
+          "eight": {
+            "wall_seconds": 0.3591473884880543,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261029,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.34272989444434643
+                },
+                {
+                  "device": 1,
+                  "offset": 1671168,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.3572145476937294
+                },
+                {
+                  "device": 2,
+                  "offset": 3342336,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.3052734434604645
+                },
+                {
+                  "device": 3,
+                  "offset": 5013504,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.23331040143966675
+                },
+                {
+                  "device": 4,
+                  "offset": 6684672,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.32877530343830585
+                },
+                {
+                  "device": 5,
+                  "offset": 8355840,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.31725989654660225
+                },
+                {
+                  "device": 6,
+                  "offset": 10027008,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.3130331542342901
+                },
+                {
+                  "device": 7,
+                  "offset": 11698176,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.29009411484003067
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.3588383551687002,
+                "startup_seconds": 1.7034821212291718e-05,
+                "sampling_seconds": 0.3588213203474879
+              },
+              "estimates": {
+                "acceptance": 0.7478606605957845,
+                "error": 0.011745288291095448,
+                "conditional_error": 0.01570518267632709
+              },
+              "standard_errors": {
+                "acceptance": 0.0005090928176791837,
+                "error": 9.781357448036597e-06,
+                "conditional_error": 1.7785018961794306e-05
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 2.3919508941471577,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261029,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 2.3918623002246022
+              },
+              "estimates": {
+                "acceptance": 0.7478606605957847,
+                "error": 0.011745288291095448,
+                "conditional_error": 0.015705182676327086
+              },
+              "standard_errors": {
+                "acceptance": 0.0005090928176791842,
+                "error": 9.781357448036604e-06,
+                "conditional_error": 1.778501896179431e-05
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.7076247148215771,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261029,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.6847434164956212
+                },
+                {
+                  "device": 1,
+                  "offset": 3342336,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.5924175903201103
+                },
+                {
+                  "device": 2,
+                  "offset": 6684672,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.7011538073420525
+                },
+                {
+                  "device": 3,
+                  "offset": 10027008,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.7014849046245217
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.7074064156040549,
+                "startup_seconds": 1.5226192772388458e-05,
+                "sampling_seconds": 0.7073911894112825
+              },
+              "estimates": {
+                "acceptance": 0.7478606605957845,
+                "error": 0.011745288291095448,
+                "conditional_error": 0.01570518267632709
+              },
+              "standard_errors": {
+                "acceptance": 0.0005090928176791839,
+                "error": 9.7813574480366e-06,
+                "conditional_error": 1.778501896179431e-05
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 2.220446049250313e-16,
+                "error": 0.0,
+                "conditional_error": 3.469446951953614e-18
+              },
+              "standard_errors": {
+                "acceptance": 3.2526065174565133e-19,
+                "error": 3.3881317890172014e-21,
+                "conditional_error": 0.0
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 2.220446049250313e-16,
+                "error": 0.0,
+                "conditional_error": 3.469446951953614e-18
+              },
+              "standard_errors": {
+                "acceptance": 4.336808689942018e-19,
+                "error": 6.776263578034403e-21,
+                "conditional_error": 3.3881317890172014e-21
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 14.50 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 27 %, 3764 MiB, 36, 149.21 W, 2745 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2511 MiB, 33, 105.48 W, 2730 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2511 MiB, 34, 98.04 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 30 %, 2511 MiB, 34, 102.42 W, 2805 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 31, 63.50 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 30, 70.00 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 33, 65.44 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 32, 62.57 W, 2520 MHz"
+        },
+        {
+          "seed": 20261030,
+          "order": [
+            "single",
+            "four",
+            "eight"
+          ],
+          "load": [
+            150.236328125,
+            149.47998046875,
+            149.10302734375
+          ],
+          "single": {
+            "wall_seconds": 2.098080364987254,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261030,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 2.09799172449857
+              },
+              "estimates": {
+                "acceptance": 0.7460159734811285,
+                "error": 0.011735178833566557,
+                "conditional_error": 0.01573046590250177
+              },
+              "standard_errors": {
+                "acceptance": 0.0005085583444465632,
+                "error": 9.77670416983325e-06,
+                "conditional_error": 1.7826121070867855e-05
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.7826578635722399,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261030,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.781164919026196
+                },
+                {
+                  "device": 1,
+                  "offset": 3342336,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.5649161506444216
+                },
+                {
+                  "device": 2,
+                  "offset": 6684672,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.5079795978963375
+                },
+                {
+                  "device": 3,
+                  "offset": 10027008,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.5916171977296472
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.7824846273288131,
+                "startup_seconds": 1.1830590665340424e-05,
+                "sampling_seconds": 0.7824727967381477
+              },
+              "estimates": {
+                "acceptance": 0.7460159734811285,
+                "error": 0.011735178833566548,
+                "conditional_error": 0.01573046590250176
+              },
+              "standard_errors": {
+                "acceptance": 0.000508558344446563,
+                "error": 9.776704169833247e-06,
+                "conditional_error": 1.7826121070867844e-05
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.42097951006144285,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261030,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.3471397217363119
+                },
+                {
+                  "device": 1,
+                  "offset": 1671168,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.41887416038662195
+                },
+                {
+                  "device": 2,
+                  "offset": 3342336,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.39426155295223
+                },
+                {
+                  "device": 3,
+                  "offset": 5013504,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.3264358825981617
+                },
+                {
+                  "device": 4,
+                  "offset": 6684672,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.40164793748408556
+                },
+                {
+                  "device": 5,
+                  "offset": 8355840,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.40907491091638803
+                },
+                {
+                  "device": 6,
+                  "offset": 10027008,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.32212828006595373
+                },
+                {
+                  "device": 7,
+                  "offset": 11698176,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.3778704358264804
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.42085507325828075,
+                "startup_seconds": 7.286667823791504e-06,
+                "sampling_seconds": 0.42084778659045696
+              },
+              "estimates": {
+                "acceptance": 0.7460159734811286,
+                "error": 0.011735178833566548,
+                "conditional_error": 0.015730465902501756
+              },
+              "standard_errors": {
+                "acceptance": 0.0005085583444465631,
+                "error": 9.776704169833247e-06,
+                "conditional_error": 1.782612107086784e-05
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 0.0,
+                "error": 8.673617379884035e-18,
+                "conditional_error": 1.0408340855860843e-17
+              },
+              "standard_errors": {
+                "acceptance": 2.168404344971009e-19,
+                "error": 3.3881317890172014e-21,
+                "conditional_error": 1.0164395367051604e-20
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 1.1102230246251565e-16,
+                "error": 8.673617379884035e-18,
+                "conditional_error": 1.3877787807814457e-17
+              },
+              "standard_errors": {
+                "acceptance": 1.0842021724855044e-19,
+                "error": 3.3881317890172014e-21,
+                "conditional_error": 1.3552527156068805e-20
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 14.34 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 3764 MiB, 37, 125.11 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 17 %, 2511 MiB, 33, 111.53 W, 2730 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 7 %, 2511 MiB, 34, 101.30 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2511 MiB, 34, 119.30 W, 2805 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 24 %, 1258 MiB, 32, 91.26 W, 2745 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 31 %, 1258 MiB, 31, 96.50 W, 2715 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 66 %, 1258 MiB, 34, 95.98 W, 2670 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 33, 90.38 W, 2760 MHz"
+        },
+        {
+          "seed": 20261031,
+          "order": [
+            "four",
+            "eight",
+            "single"
+          ],
+          "load": [
+            151.0185546875,
+            149.65478515625,
+            149.16162109375
+          ],
+          "four": {
+            "wall_seconds": 0.6654206188395619,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261031,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.5171947795897722
+                },
+                {
+                  "device": 1,
+                  "offset": 3342336,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.663662432692945
+                },
+                {
+                  "device": 2,
+                  "offset": 6684672,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.545388400554657
+                },
+                {
+                  "device": 3,
+                  "offset": 10027008,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.6439460208639503
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.6651217918843031,
+                "startup_seconds": 1.895800232887268e-05,
+                "sampling_seconds": 0.6651028338819742
+              },
+              "estimates": {
+                "acceptance": 0.7475011971943124,
+                "error": 0.011741459381370995,
+                "conditional_error": 0.015707612811112076
+              },
+              "standard_errors": {
+                "acceptance": 0.0005089894773226805,
+                "error": 9.779532998443623e-06,
+                "conditional_error": 1.7790830673104945e-05
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.4147057859227061,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261031,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.24878889601677656
+                },
+                {
+                  "device": 1,
+                  "offset": 1671168,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.33004440274089575
+                },
+                {
+                  "device": 2,
+                  "offset": 3342336,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.36056287679821253
+                },
+                {
+                  "device": 3,
+                  "offset": 5013504,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.31232226360589266
+                },
+                {
+                  "device": 4,
+                  "offset": 6684672,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.41297728568315506
+                },
+                {
+                  "device": 5,
+                  "offset": 8355840,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.34381859470158815
+                },
+                {
+                  "device": 6,
+                  "offset": 10027008,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.38778724800795317
+                },
+                {
+                  "device": 7,
+                  "offset": 11698176,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.32101298682391644
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.4143833611160517,
+                "startup_seconds": 1.1750496923923492e-05,
+                "sampling_seconds": 0.41437161061912775
+              },
+              "estimates": {
+                "acceptance": 0.7475011971943124,
+                "error": 0.011741459381370993,
+                "conditional_error": 0.015707612811112073
+              },
+              "standard_errors": {
+                "acceptance": 0.0005089894773226804,
+                "error": 9.779532998443625e-06,
+                "conditional_error": 1.779083067310494e-05
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 2.116436352021992,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261031,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 2.1162956785410643
+              },
+              "estimates": {
+                "acceptance": 0.7475011971943123,
+                "error": 0.011741459381370998,
+                "conditional_error": 0.015707612811112083
+              },
+              "standard_errors": {
+                "acceptance": 0.0005089894773226801,
+                "error": 9.77953299844363e-06,
+                "conditional_error": 1.779083067310495e-05
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 1.1102230246251565e-16,
+                "error": 3.469446951953614e-18,
+                "conditional_error": 6.938893903907228e-18
+              },
+              "standard_errors": {
+                "acceptance": 3.2526065174565133e-19,
+                "error": 6.776263578034403e-21,
+                "conditional_error": 6.776263578034403e-21
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 1.1102230246251565e-16,
+                "error": 5.204170427930421e-18,
+                "conditional_error": 1.0408340855860843e-17
+              },
+              "standard_errors": {
+                "acceptance": 2.168404344971009e-19,
+                "error": 5.082197683525802e-21,
+                "conditional_error": 1.0164395367051604e-20
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 14.65 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 59 %, 3764 MiB, 38, 207.30 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2511 MiB, 33, 72.08 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2511 MiB, 33, 61.82 W, 2520 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2511 MiB, 33, 72.16 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 32, 70.36 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 30, 77.95 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 34, 77.19 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 33, 70.68 W, 2520 MHz"
+        },
+        {
+          "seed": 20261032,
+          "order": [
+            "eight",
+            "single",
+            "four"
+          ],
+          "load": [
+            152.05810546875,
+            149.89306640625,
+            149.24169921875
+          ],
+          "eight": {
+            "wall_seconds": 0.4168807491660118,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261032,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.38705576211214066
+                },
+                {
+                  "device": 1,
+                  "offset": 1671168,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.3062975788488984
+                },
+                {
+                  "device": 2,
+                  "offset": 3342336,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.32250931207090616
+                },
+                {
+                  "device": 3,
+                  "offset": 5013504,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.24539439659565687
+                },
+                {
+                  "device": 4,
+                  "offset": 6684672,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.40066630207002163
+                },
+                {
+                  "device": 5,
+                  "offset": 8355840,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.40914729330688715
+                },
+                {
+                  "device": 6,
+                  "offset": 10027008,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.4053087439388037
+                },
+                {
+                  "device": 7,
+                  "offset": 11698176,
+                  "shots": 1671168,
+                  "sampling_seconds": 0.3301749099045992
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.41672477032989264,
+                "startup_seconds": 8.556991815567017e-06,
+                "sampling_seconds": 0.41671621333807707
+              },
+              "estimates": {
+                "acceptance": 0.7469354015192775,
+                "error": 0.011737319729886111,
+                "conditional_error": 0.01571396898046636
+              },
+              "standard_errors": {
+                "acceptance": 0.0005088260133487844,
+                "error": 9.778223803923624e-06,
+                "conditional_error": 1.7802806975346057e-05
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 2.113986096344888,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261032,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 2.1138893151655793
+              },
+              "estimates": {
+                "acceptance": 0.7469354015192775,
+                "error": 0.01173731972988611,
+                "conditional_error": 0.015713968980466356
+              },
+              "standard_errors": {
+                "acceptance": 0.0005088260133487838,
+                "error": 9.778223803923622e-06,
+                "conditional_error": 1.7802806975346046e-05
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.7921505523845553,
+            "result": {
+              "status": "complete",
+              "requested": 13369344,
+              "completed": 13369344,
+              "seed": 20261032,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.5500386785715818
+                },
+                {
+                  "device": 1,
+                  "offset": 3342336,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.758822132833302
+                },
+                {
+                  "device": 2,
+                  "offset": 6684672,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.5706727113574743
+                },
+                {
+                  "device": 3,
+                  "offset": 10027008,
+                  "shots": 3342336,
+                  "sampling_seconds": 0.7907591508701444
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.7919725505635142,
+                "startup_seconds": 1.2925826013088226e-05,
+                "sampling_seconds": 0.7919596247375011
+              },
+              "estimates": {
+                "acceptance": 0.7469354015192774,
+                "error": 0.011737319729886111,
+                "conditional_error": 0.01571396898046636
+              },
+              "standard_errors": {
+                "acceptance": 0.0005088260133487844,
+                "error": 9.778223803923626e-06,
+                "conditional_error": 1.7802806975346063e-05
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 1.1102230246251565e-16,
+                "error": 1.734723475976807e-18,
+                "conditional_error": 3.469446951953614e-18
+              },
+              "standard_errors": {
+                "acceptance": 6.505213034913027e-19,
+                "error": 3.3881317890172014e-21,
+                "conditional_error": 1.6940658945086007e-20
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 0.0,
+                "error": 1.734723475976807e-18,
+                "conditional_error": 3.469446951953614e-18
+              },
+              "standard_errors": {
+                "acceptance": 6.505213034913027e-19,
+                "error": 1.6940658945086007e-21,
+                "conditional_error": 1.0164395367051604e-20
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 14.67 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 3764 MiB, 38, 149.81 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 26 %, 2511 MiB, 34, 108.00 W, 2730 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2511 MiB, 34, 99.85 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 4 %, 2511 MiB, 35, 105.81 W, 2805 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 32, 66.86 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 31, 73.73 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 34, 71.23 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 1258 MiB, 33, 66.74 W, 2520 MHz"
+        }
+      ],
+      "worker_pids": [
+        3489494,
+        3490630,
+        3490666,
+        3490674,
+        3490679,
+        3490774,
+        3490775,
+        3490778,
+        3490784,
+        3490793,
+        3490798,
+        3490810,
+        3490825
+      ],
+      "single": {
+        "median_seconds": 2.113986096344888,
+        "min_seconds": 1.8397708516567945,
+        "max_seconds": 2.3919508941471577,
+        "shots_per_second": 6324234.593177213
+      },
+      "four": {
+        "median_seconds": 0.7076247148215771,
+        "min_seconds": 0.643618899397552,
+        "max_seconds": 0.7921505523845553,
+        "shots_per_second": 18893268.875396743
+      },
+      "eight": {
+        "median_seconds": 0.4168807491660118,
+        "min_seconds": 0.3591473884880543,
+        "max_seconds": 0.42097951006144285,
+        "shots_per_second": 32069948.124843754
+      },
+      "four_over_single": 2.98743960190525,
+      "eight_over_single": 5.0709611815225575,
+      "eight_over_four": 1.697427180883769,
+      "load_after": [
+        152.9345703125,
+        150.11083984375,
+        149.31591796875
+      ]
+    },
+    {
+      "task": "color3",
+      "shots": 134217728,
+      "sampling": {
+        "method": "physical"
+      },
+      "initial_inventory": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 14.77 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 598 MiB, 36, 61.52 W, 2520 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 33, 63.63 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 33, 58.02 W, 2520 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 33, 58.53 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 31, 25.55 W, 285 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 29, 36.15 W, 375 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 32, 29.57 W, 405 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 32, 22.17 W, 210 MHz",
+      "load_before": [
+        153.74072265625,
+        150.3251953125,
+        149.3896484375
+      ],
+      "first_calls": {
+        "single": {
+          "seconds": 0.009858036413788795,
+          "result": {
+            "status": "complete",
+            "requested": 524288,
+            "completed": 524288,
+            "seed": 7,
+            "offset": 0,
+            "batch_size": 65536,
+            "timings": {
+              "sampling_seconds": 0.009802655316889286
+            },
+            "estimates": {
+              "acceptance": 0.6873180866241455,
+              "error": 4.768371582031251e-07,
+              "conditional_error": 6.937648920970121e-07
+            },
+            "standard_errors": {
+              "acceptance": 0.0006401891202135796,
+              "error": 2.92001467873283e-07,
+              "conditional_error": 4.2484388432007553e-07
+            }
+          }
+        },
+        "four": {
+          "seconds": 2.667049942538142,
+          "result": {
+            "status": "complete",
+            "requested": 524288,
+            "completed": 524288,
+            "seed": 7,
+            "offset": 0,
+            "batch_size": 65536,
+            "devices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "shards": [
+              {
+                "device": 0,
+                "offset": 0,
+                "shots": 131072,
+                "sampling_seconds": 0.5160430576652288
+              },
+              {
+                "device": 1,
+                "offset": 131072,
+                "shots": 131072,
+                "sampling_seconds": 0.13605590723454952
+              },
+              {
+                "device": 2,
+                "offset": 262144,
+                "shots": 131072,
+                "sampling_seconds": 0.2571266433224082
+              },
+              {
+                "device": 3,
+                "offset": 393216,
+                "shots": 131072,
+                "sampling_seconds": 0.21459167450666428
+              }
+            ],
+            "timings": {
+              "total_seconds": 2.6669671358540654,
+              "startup_seconds": 2.1502061150968075,
+              "sampling_seconds": 0.5167610207572579
+            },
+            "estimates": {
+              "acceptance": 0.6873180866241455,
+              "error": 4.76837158203125e-07,
+              "conditional_error": 6.937648920970119e-07
+            },
+            "standard_errors": {
+              "acceptance": 0.0006401891202135796,
+              "error": 2.92001467873283e-07,
+              "conditional_error": 4.2484388432007553e-07
+            }
+          }
+        },
+        "eight": {
+          "seconds": 3.567604698240757,
+          "result": {
+            "status": "complete",
+            "requested": 524288,
+            "completed": 524288,
+            "seed": 7,
+            "offset": 0,
+            "batch_size": 65536,
+            "devices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "shards": [
+              {
+                "device": 0,
+                "offset": 0,
+                "shots": 65536,
+                "sampling_seconds": 0.42751271463930607
+              },
+              {
+                "device": 1,
+                "offset": 65536,
+                "shots": 65536,
+                "sampling_seconds": 0.11133016087114811
+              },
+              {
+                "device": 2,
+                "offset": 131072,
+                "shots": 65536,
+                "sampling_seconds": 0.12320076953619719
+              },
+              {
+                "device": 3,
+                "offset": 196608,
+                "shots": 65536,
+                "sampling_seconds": 0.1343168979510665
+              },
+              {
+                "device": 4,
+                "offset": 262144,
+                "shots": 65536,
+                "sampling_seconds": 0.11511619761586189
+              },
+              {
+                "device": 5,
+                "offset": 327680,
+                "shots": 65536,
+                "sampling_seconds": 0.11408733390271664
+              },
+              {
+                "device": 6,
+                "offset": 393216,
+                "shots": 65536,
+                "sampling_seconds": 0.1143100718036294
+              },
+              {
+                "device": 7,
+                "offset": 458752,
+                "shots": 65536,
+                "sampling_seconds": 0.1130687054246664
+              }
+            ],
+            "timings": {
+              "total_seconds": 3.5675222165882587,
+              "startup_seconds": 3.1392038241028786,
+              "sampling_seconds": 0.4283183924853802
+            },
+            "estimates": {
+              "acceptance": 0.6873180866241455,
+              "error": 4.768371582031251e-07,
+              "conditional_error": 6.937648920970121e-07
+            },
+            "standard_errors": {
+              "acceptance": 0.0006401891202135796,
+              "error": 2.92001467873283e-07,
+              "conditional_error": 4.2484388432007553e-07
+            }
+          }
+        }
+      },
+      "rounds": [
+        {
+          "seed": 20261028,
+          "order": [
+            "eight",
+            "single",
+            "four"
+          ],
+          "load": [
+            155.42431640625,
+            150.79345703125,
+            149.55224609375
+          ],
+          "eight": {
+            "wall_seconds": 0.19867825508117676,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261028,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.16804523114115
+                },
+                {
+                  "device": 1,
+                  "offset": 16777216,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1773455562070012
+                },
+                {
+                  "device": 2,
+                  "offset": 33554432,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1851297039538622
+                },
+                {
+                  "device": 3,
+                  "offset": 50331648,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.18874183017760515
+                },
+                {
+                  "device": 4,
+                  "offset": 67108864,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1743682585656643
+                },
+                {
+                  "device": 5,
+                  "offset": 83886080,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.16881502326577902
+                },
+                {
+                  "device": 6,
+                  "offset": 100663296,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.09345685597509146
+                },
+                {
+                  "device": 7,
+                  "offset": 117440512,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.18269500229507685
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.19858749769628048,
+                "startup_seconds": 7.400289177894592e-06,
+                "sampling_seconds": 0.19858009740710258
+              },
+              "estimates": {
+                "acceptance": 0.6867997865192592,
+                "error": 5.55533915758133e-07,
+                "conditional_error": 8.088731631289678e-07
+              },
+              "standard_errors": {
+                "acceptance": 4.0029936088275456e-05,
+                "error": 3.4550026069708816e-08,
+                "conditional_error": 5.0305886761691947e-08
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 1.296683975495398,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261028,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 1.2966155502945185
+              },
+              "estimates": {
+                "acceptance": 0.6867997865192582,
+                "error": 5.555339157581328e-07,
+                "conditional_error": 8.088731631289687e-07
+              },
+              "standard_errors": {
+                "acceptance": 4.0029936088275524e-05,
+                "error": 3.455002606970897e-08,
+                "conditional_error": 5.0305886761692244e-08
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.3567888233810663,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261028,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.29676010645926
+                },
+                {
+                  "device": 1,
+                  "offset": 33554432,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.3555891839787364
+                },
+                {
+                  "device": 2,
+                  "offset": 67108864,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.2945193536579609
+                },
+                {
+                  "device": 3,
+                  "offset": 100663296,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.3395748985931277
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.3566306298598647,
+                "startup_seconds": 7.317401468753815e-06,
+                "sampling_seconds": 0.35662331245839596
+              },
+              "estimates": {
+                "acceptance": 0.6867997865192591,
+                "error": 5.555339157581331e-07,
+                "conditional_error": 8.088731631289681e-07
+              },
+              "standard_errors": {
+                "acceptance": 4.002993608827548e-05,
+                "error": 3.4550026069708783e-08,
+                "conditional_error": 5.030588676169191e-08
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 8.881784197001252e-16,
+                "error": 3.1763735522036263e-22,
+                "conditional_error": 5.293955920339377e-22
+              },
+              "standard_errors": {
+                "acceptance": 4.0657581468206416e-20,
+                "error": 1.852884572118782e-22,
+                "conditional_error": 3.374896899216353e-22
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 9.992007221626409e-16,
+                "error": 2.117582368135751e-22,
+                "conditional_error": 8.470329472543003e-22
+              },
+              "standard_errors": {
+                "acceptance": 6.776263578034403e-20,
+                "error": 1.522012327097571e-22,
+                "conditional_error": 2.9778502051908996e-22
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 15.53 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 29 %, 1436 MiB, 36, 83.04 W, 2520 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 34 %, 823 MiB, 33, 72.09 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 37 %, 823 MiB, 33, 63.98 W, 2520 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 27 %, 823 MiB, 33, 66.04 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 32, 63.67 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 30, 70.62 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 33, 65.67 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 32, 62.22 W, 2520 MHz"
+        },
+        {
+          "seed": 20261029,
+          "order": [
+            "single",
+            "four",
+            "eight"
+          ],
+          "load": [
+            155.42431640625,
+            150.79345703125,
+            149.55224609375
+          ],
+          "single": {
+            "wall_seconds": 0.6492930585518479,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261029,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 0.6492052283138037
+              },
+              "estimates": {
+                "acceptance": 0.6868695188313723,
+                "error": 6.34230673313141e-07,
+                "conditional_error": 9.233641265552297e-07
+              },
+              "standard_errors": {
+                "acceptance": 4.002751768342741e-05,
+                "error": 4.118401260547845e-08,
+                "conditional_error": 5.995906832050587e-08
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.3829563558101654,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261029,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.3570789163932204
+                },
+                {
+                  "device": 1,
+                  "offset": 33554432,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.3817731589078903
+                },
+                {
+                  "device": 2,
+                  "offset": 67108864,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.2420962257310748
+                },
+                {
+                  "device": 3,
+                  "offset": 100663296,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.3653439739719033
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.3827721830457449,
+                "startup_seconds": 9.356066584587097e-06,
+                "sampling_seconds": 0.3827628269791603
+              },
+              "estimates": {
+                "acceptance": 0.6868695188313725,
+                "error": 6.342306733131411e-07,
+                "conditional_error": 9.233641265552296e-07
+              },
+              "standard_errors": {
+                "acceptance": 4.0027517683427235e-05,
+                "error": 4.1184012605478425e-08,
+                "conditional_error": 5.995906832050582e-08
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.19200783967971802,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261029,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.16370134893804789
+                },
+                {
+                  "device": 1,
+                  "offset": 16777216,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1641213120892644
+                },
+                {
+                  "device": 2,
+                  "offset": 33554432,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.16569747775793076
+                },
+                {
+                  "device": 3,
+                  "offset": 50331648,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.18113095313310623
+                },
+                {
+                  "device": 4,
+                  "offset": 67108864,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.16318580601364374
+                },
+                {
+                  "device": 5,
+                  "offset": 83886080,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.19093600660562515
+                },
+                {
+                  "device": 6,
+                  "offset": 100663296,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1668753521516919
+                },
+                {
+                  "device": 7,
+                  "offset": 117440512,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.16851671412587166
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.1919151470065117,
+                "startup_seconds": 6.2407925724983215e-06,
+                "sampling_seconds": 0.1919089062139392
+              },
+              "estimates": {
+                "acceptance": 0.6868695188313723,
+                "error": 6.342306733131411e-07,
+                "conditional_error": 9.233641265552299e-07
+              },
+              "standard_errors": {
+                "acceptance": 4.002751768342727e-05,
+                "error": 4.1184012605478425e-08,
+                "conditional_error": 5.995906832050584e-08
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 2.220446049250313e-16,
+                "error": 1.0587911840678754e-22,
+                "conditional_error": 1.0587911840678754e-22
+              },
+              "standard_errors": {
+                "acceptance": 1.7618285302889447e-19,
+                "error": 2.6469779601696886e-23,
+                "conditional_error": 5.293955920339377e-23
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 0.0,
+                "error": 1.0587911840678754e-22,
+                "conditional_error": 2.117582368135751e-22
+              },
+              "standard_errors": {
+                "acceptance": 1.4230153513872246e-19,
+                "error": 2.6469779601696886e-23,
+                "conditional_error": 2.6469779601696886e-23
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 15.59 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 15 %, 1436 MiB, 36, 95.03 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 31 %, 823 MiB, 33, 79.63 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 24 %, 823 MiB, 34, 80.80 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 19 %, 823 MiB, 33, 75.04 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 5 %, 414 MiB, 32, 67.09 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 11 %, 414 MiB, 31, 73.76 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 34, 69.64 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 33, 65.48 W, 2520 MHz"
+        },
+        {
+          "seed": 20261030,
+          "order": [
+            "four",
+            "eight",
+            "single"
+          ],
+          "load": [
+            153.86865234375,
+            150.5478515625,
+            149.47900390625
+          ],
+          "four": {
+            "wall_seconds": 0.2760392175987363,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261030,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.19244052097201347
+                },
+                {
+                  "device": 1,
+                  "offset": 33554432,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.17821008805185556
+                },
+                {
+                  "device": 2,
+                  "offset": 67108864,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.21780571807175875
+                },
+                {
+                  "device": 3,
+                  "offset": 100663296,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.26249232701957226
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.275955094024539,
+                "startup_seconds": 7.179565727710724e-06,
+                "sampling_seconds": 0.2759479144588113
+              },
+              "estimates": {
+                "acceptance": 0.6868049632757904,
+                "error": 5.317851901054381e-07,
+                "conditional_error": 7.742885077140841e-07
+              },
+              "standard_errors": {
+                "acceptance": 4.002977252611458e-05,
+                "error": 2.8667457959792893e-08,
+                "conditional_error": 4.174040236683572e-08
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.1650782125070691,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261030,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.07859216816723347
+                },
+                {
+                  "device": 1,
+                  "offset": 16777216,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.16166621912270784
+                },
+                {
+                  "device": 2,
+                  "offset": 33554432,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.14515484031289816
+                },
+                {
+                  "device": 3,
+                  "offset": 50331648,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1436900496482849
+                },
+                {
+                  "device": 4,
+                  "offset": 67108864,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1640765992924571
+                },
+                {
+                  "device": 5,
+                  "offset": 83886080,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.10123251471668482
+                },
+                {
+                  "device": 6,
+                  "offset": 100663296,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.12187773361802101
+                },
+                {
+                  "device": 7,
+                  "offset": 117440512,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.13197395950555801
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.1649884907528758,
+                "startup_seconds": 6.753019988536835e-06,
+                "sampling_seconds": 0.16498173773288727
+              },
+              "estimates": {
+                "acceptance": 0.6868049632757901,
+                "error": 5.317851901054381e-07,
+                "conditional_error": 7.742885077140845e-07
+              },
+              "standard_errors": {
+                "acceptance": 4.0029772526114536e-05,
+                "error": 2.8667457959792883e-08,
+                "conditional_error": 4.174040236683572e-08
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 0.6804342931136489,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261030,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 0.68035111669451
+              },
+              "estimates": {
+                "acceptance": 0.6868049632757905,
+                "error": 5.317851901054389e-07,
+                "conditional_error": 7.742885077140851e-07
+              },
+              "standard_errors": {
+                "acceptance": 4.0029772526114706e-05,
+                "error": 2.8667457959792896e-08,
+                "conditional_error": 4.174040236683571e-08
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 1.1102230246251565e-16,
+                "error": 7.411538288475128e-22,
+                "conditional_error": 9.529120656610879e-22
+              },
+              "standard_errors": {
+                "acceptance": 1.2874900798265365e-19,
+                "error": 3.308722450212111e-24,
+                "conditional_error": 6.617444900424222e-24
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 4.440892098500626e-16,
+                "error": 7.411538288475128e-22,
+                "conditional_error": 5.293955920339377e-22
+              },
+              "standard_errors": {
+                "acceptance": 1.6940658945086007e-19,
+                "error": 1.3234889800848443e-23,
+                "conditional_error": 6.617444900424222e-24
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 15.60 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 62 %, 1436 MiB, 37, 130.14 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 823 MiB, 33, 79.49 W, 2730 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 823 MiB, 34, 72.46 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 823 MiB, 33, 63.33 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 32, 69.60 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 30, 76.17 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 34, 73.13 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 33, 67.46 W, 2520 MHz"
+        },
+        {
+          "seed": 20261031,
+          "order": [
+            "eight",
+            "single",
+            "four"
+          ],
+          "load": [
+            153.86865234375,
+            150.5478515625,
+            149.47900390625
+          ],
+          "eight": {
+            "wall_seconds": 0.15246699564158916,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261031,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.08153656031936407
+                },
+                {
+                  "device": 1,
+                  "offset": 16777216,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.13776828162372112
+                },
+                {
+                  "device": 2,
+                  "offset": 33554432,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.10040010511875153
+                },
+                {
+                  "device": 3,
+                  "offset": 50331648,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.12959162797778845
+                },
+                {
+                  "device": 4,
+                  "offset": 67108864,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.14876015298068523
+                },
+                {
+                  "device": 5,
+                  "offset": 83886080,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.11964720766991377
+                },
+                {
+                  "device": 6,
+                  "offset": 100663296,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.11256847437471151
+                },
+                {
+                  "device": 7,
+                  "offset": 117440512,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1512017110362649
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.15232202410697937,
+                "startup_seconds": 8.09691846370697e-06,
+                "sampling_seconds": 0.15231392718851566
+              },
+              "estimates": {
+                "acceptance": 0.6867847768589854,
+                "error": 6.183981895446777e-07,
+                "conditional_error": 9.00425009961528e-07
+              },
+              "standard_errors": {
+                "acceptance": 4.003045345040792e-05,
+                "error": 3.827494137361518e-08,
+                "conditional_error": 5.573068995801399e-08
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 0.6910158591344953,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261031,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 0.6909265080466866
+              },
+              "estimates": {
+                "acceptance": 0.6867847768589852,
+                "error": 6.183981895446771e-07,
+                "conditional_error": 9.004250099615273e-07
+              },
+              "standard_errors": {
+                "acceptance": 4.0030453450408e-05,
+                "error": 3.827494137361503e-08,
+                "conditional_error": 5.5730689958013786e-08
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.2689371509477496,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261031,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.26775877363979816
+                },
+                {
+                  "device": 1,
+                  "offset": 33554432,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.18536304496228695
+                },
+                {
+                  "device": 2,
+                  "offset": 67108864,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.2396909035742283
+                },
+                {
+                  "device": 3,
+                  "offset": 100663296,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.22233686223626137
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.2687462968751788,
+                "startup_seconds": 1.0919757187366486e-05,
+                "sampling_seconds": 0.26873537711799145
+              },
+              "estimates": {
+                "acceptance": 0.6867847768589854,
+                "error": 6.183981895446776e-07,
+                "conditional_error": 9.004250099615278e-07
+              },
+              "standard_errors": {
+                "acceptance": 4.0030453450407934e-05,
+                "error": 3.827494137361521e-08,
+                "conditional_error": 5.5730689958014024e-08
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 2.220446049250313e-16,
+                "error": 5.293955920339377e-22,
+                "conditional_error": 5.293955920339377e-22
+              },
+              "standard_errors": {
+                "acceptance": 6.776263578034403e-20,
+                "error": 1.7867101231145398e-22,
+                "conditional_error": 2.3822801641527197e-22
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 2.220446049250313e-16,
+                "error": 6.352747104407253e-22,
+                "conditional_error": 6.352747104407253e-22
+              },
+              "standard_errors": {
+                "acceptance": 8.131516293641283e-20,
+                "error": 1.522012327097571e-22,
+                "conditional_error": 2.0514079191315086e-22
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 15.57 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 31 %, 1436 MiB, 37, 125.27 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 43 %, 823 MiB, 33, 75.88 W, 2700 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 39 %, 823 MiB, 34, 68.23 W, 2520 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 22 %, 823 MiB, 33, 69.30 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 32, 68.58 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 31, 75.41 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 34, 72.77 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 414 MiB, 33, 67.02 W, 2520 MHz"
+        },
+        {
+          "seed": 20261032,
+          "order": [
+            "single",
+            "four",
+            "eight"
+          ],
+          "load": [
+            153.86865234375,
+            150.5478515625,
+            149.47900390625
+          ],
+          "single": {
+            "wall_seconds": 0.749514501541853,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261032,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 0.7493918975815177
+              },
+              "estimates": {
+                "acceptance": 0.6867896509356789,
+                "error": 6.9383531808853e-07,
+                "conditional_error": 1.0102588429270188e-06
+              },
+              "standard_errors": {
+                "acceptance": 4.003030963110925e-05,
+                "error": 4.444561605177239e-08,
+                "conditional_error": 6.471510171364756e-08
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.2803598986938596,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261032,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.198882095515728
+                },
+                {
+                  "device": 1,
+                  "offset": 33554432,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.17866539396345615
+                },
+                {
+                  "device": 2,
+                  "offset": 67108864,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.27561204880476
+                },
+                {
+                  "device": 3,
+                  "offset": 100663296,
+                  "shots": 33554432,
+                  "sampling_seconds": 0.19291320070624352
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.28018999472260475,
+                "startup_seconds": 1.1197291314601898e-05,
+                "sampling_seconds": 0.28017879743129015
+              },
+              "estimates": {
+                "acceptance": 0.6867896509356795,
+                "error": 6.938353180885314e-07,
+                "conditional_error": 1.0102588429270198e-06
+              },
+              "standard_errors": {
+                "acceptance": 4.00303096311093e-05,
+                "error": 4.444561605177231e-08,
+                "conditional_error": 6.471510171364739e-08
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.2275707321241498,
+            "result": {
+              "status": "complete",
+              "requested": 134217728,
+              "completed": 134217728,
+              "seed": 20261032,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.2077767215669155
+                },
+                {
+                  "device": 1,
+                  "offset": 16777216,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.14741226565092802
+                },
+                {
+                  "device": 2,
+                  "offset": 33554432,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.11292813532054424
+                },
+                {
+                  "device": 3,
+                  "offset": 50331648,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.19500338844954967
+                },
+                {
+                  "device": 4,
+                  "offset": 67108864,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.14887835457921028
+                },
+                {
+                  "device": 5,
+                  "offset": 83886080,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.14885585475713015
+                },
+                {
+                  "device": 6,
+                  "offset": 100663296,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.1077050818130374
+                },
+                {
+                  "device": 7,
+                  "offset": 117440512,
+                  "shots": 16777216,
+                  "sampling_seconds": 0.21302026323974133
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.22748001851141453,
+                "startup_seconds": 6.251037120819092e-06,
+                "sampling_seconds": 0.2274737674742937
+              },
+              "estimates": {
+                "acceptance": 0.6867896509356798,
+                "error": 6.938353180885315e-07,
+                "conditional_error": 1.0102588429270196e-06
+              },
+              "standard_errors": {
+                "acceptance": 4.003030963110931e-05,
+                "error": 4.444561605177235e-08,
+                "conditional_error": 6.471510171364742e-08
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 5.551115123125783e-16,
+                "error": 1.376428539288238e-21,
+                "conditional_error": 1.0587911840678754e-21
+              },
+              "standard_errors": {
+                "acceptance": 4.743384504624082e-20,
+                "error": 7.940933880509066e-23,
+                "conditional_error": 1.7205356741102976e-22
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 8.881784197001252e-16,
+                "error": 1.4823076576950256e-21,
+                "conditional_error": 8.470329472543003e-22
+              },
+              "standard_errors": {
+                "acceptance": 5.421010862427522e-20,
+                "error": 3.970466940254533e-23,
+                "conditional_error": 1.4558378780933287e-22
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 15.90 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 17 %, 1436 MiB, 37, 96.54 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 10 %, 823 MiB, 33, 88.38 W, 2730 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 28 %, 823 MiB, 34, 75.04 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 8 %, 823 MiB, 33, 71.26 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 21 %, 414 MiB, 32, 67.11 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 26 %, 414 MiB, 31, 73.78 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 3 %, 414 MiB, 34, 70.16 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 20 %, 414 MiB, 33, 65.61 W, 2520 MHz"
+        }
+      ],
+      "worker_pids": [
+        3489494,
+        3491696,
+        3491697,
+        3491698,
+        3491699,
+        3491753,
+        3491754,
+        3491755,
+        3491756,
+        3491757,
+        3491758,
+        3491759,
+        3491760
+      ],
+      "single": {
+        "median_seconds": 0.6910158591344953,
+        "min_seconds": 0.6492930585518479,
+        "max_seconds": 1.296683975495398,
+        "shots_per_second": 194232485.73210627
+      },
+      "four": {
+        "median_seconds": 0.2803598986938596,
+        "min_seconds": 0.2689371509477496,
+        "max_seconds": 0.3829563558101654,
+        "shots_per_second": 478733687.0404556
+      },
+      "eight": {
+        "median_seconds": 0.19200783967971802,
+        "min_seconds": 0.15246699564158916,
+        "max_seconds": 0.2275707321241498,
+        "shots_per_second": 699022124.4293159
+      },
+      "four_over_single": 2.4647457156098262,
+      "eight_over_single": 3.5988939841579186,
+      "eight_over_four": 1.4601481854153389,
+      "load_after": [
+        152.1171875,
+        150.23974609375,
+        149.384765625
+      ]
+    },
+    {
+      "task": "rp2-d5",
+      "shots": 80740352,
+      "sampling": {
+        "method": "physical"
+      },
+      "initial_inventory": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 14.85 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 7 %, 598 MiB, 35, 64.30 W, 2520 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 33, 65.16 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 33, 57.10 W, 2520 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 33, 59.17 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 31, 48.18 W, 480 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 30, 69.19 W, 615 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 34, 66.52 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 32, 57.64 W, 600 MHz",
+      "load_before": [
+        150.345703125,
+        149.9033203125,
+        149.2802734375
+      ],
+      "first_calls": {
+        "single": {
+          "seconds": 0.028989246115088463,
+          "result": {
+            "status": "complete",
+            "requested": 524288,
+            "completed": 524288,
+            "seed": 7,
+            "offset": 0,
+            "batch_size": 65536,
+            "timings": {
+              "sampling_seconds": 0.02892167028039694
+            },
+            "estimates": {
+              "acceptance": 0.09445005655288696,
+              "error": 0.0,
+              "conditional_error": 0.0
+            },
+            "standard_errors": {
+              "acceptance": 0.0004036579397826991,
+              "error": 0.0,
+              "conditional_error": 0.0
+            }
+          }
+        },
+        "four": {
+          "seconds": 1.7990571046248078,
+          "result": {
+            "status": "complete",
+            "requested": 524288,
+            "completed": 524288,
+            "seed": 7,
+            "offset": 0,
+            "batch_size": 65536,
+            "devices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "shards": [
+              {
+                "device": 0,
+                "offset": 0,
+                "shots": 131072,
+                "sampling_seconds": 0.2563702119514346
+              },
+              {
+                "device": 1,
+                "offset": 131072,
+                "shots": 131072,
+                "sampling_seconds": 0.09028958901762962
+              },
+              {
+                "device": 2,
+                "offset": 262144,
+                "shots": 131072,
+                "sampling_seconds": 0.09028816875070333
+              },
+              {
+                "device": 3,
+                "offset": 393216,
+                "shots": 131072,
+                "sampling_seconds": 0.08344451151788235
+              }
+            ],
+            "timings": {
+              "total_seconds": 1.798974554054439,
+              "startup_seconds": 1.5417684903368354,
+              "sampling_seconds": 0.2572060637176037
+            },
+            "estimates": {
+              "acceptance": 0.09445005655288696,
+              "error": 0.0,
+              "conditional_error": 0.0
+            },
+            "standard_errors": {
+              "acceptance": 0.0004036579397826991,
+              "error": 0.0,
+              "conditional_error": 0.0
+            }
+          }
+        },
+        "eight": {
+          "seconds": 3.0445557003840804,
+          "result": {
+            "status": "complete",
+            "requested": 524288,
+            "completed": 524288,
+            "seed": 7,
+            "offset": 0,
+            "batch_size": 65536,
+            "devices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "shards": [
+              {
+                "device": 0,
+                "offset": 0,
+                "shots": 65536,
+                "sampling_seconds": 0.3493754891678691
+              },
+              {
+                "device": 1,
+                "offset": 65536,
+                "shots": 65536,
+                "sampling_seconds": 0.10799465421587229
+              },
+              {
+                "device": 2,
+                "offset": 131072,
+                "shots": 65536,
+                "sampling_seconds": 0.12479349225759506
+              },
+              {
+                "device": 3,
+                "offset": 196608,
+                "shots": 65536,
+                "sampling_seconds": 0.11449828743934631
+              },
+              {
+                "device": 4,
+                "offset": 262144,
+                "shots": 65536,
+                "sampling_seconds": 0.14635501895099878
+              },
+              {
+                "device": 5,
+                "offset": 327680,
+                "shots": 65536,
+                "sampling_seconds": 0.11996182519942522
+              },
+              {
+                "device": 6,
+                "offset": 393216,
+                "shots": 65536,
+                "sampling_seconds": 0.11998753249645233
+              },
+              {
+                "device": 7,
+                "offset": 458752,
+                "shots": 65536,
+                "sampling_seconds": 0.11830051708966494
+              }
+            ],
+            "timings": {
+              "total_seconds": 3.0444487249478698,
+              "startup_seconds": 2.693893906660378,
+              "sampling_seconds": 0.3505548182874918
+            },
+            "estimates": {
+              "acceptance": 0.09445005655288696,
+              "error": 0.0,
+              "conditional_error": 0.0
+            },
+            "standard_errors": {
+              "acceptance": 0.0004036579397826991,
+              "error": 0.0,
+              "conditional_error": 0.0
+            }
+          }
+        }
+      },
+      "rounds": [
+        {
+          "seed": 20261028,
+          "order": [
+            "single",
+            "four",
+            "eight"
+          ],
+          "load": [
+            149.19677734375,
+            149.67236328125,
+            149.20849609375
+          ],
+          "single": {
+            "wall_seconds": 2.6057328013703227,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261028,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 2.6056452682241797
+              },
+              "estimates": {
+                "acceptance": 0.09453646059740682,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 3.254184717160782e-05,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.9553481098264456,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261028,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.867484712973237
+                },
+                {
+                  "device": 1,
+                  "offset": 20185088,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.7194586982950568
+                },
+                {
+                  "device": 2,
+                  "offset": 40370176,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.9540781211107969
+                },
+                {
+                  "device": 3,
+                  "offset": 60555264,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.725526780821383
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.9551727222278714,
+                "startup_seconds": 1.4086253941059113e-05,
+                "sampling_seconds": 0.9551586359739304
+              },
+              "estimates": {
+                "acceptance": 0.09453646059740674,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 3.254184717160789e-05,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.5155932027846575,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261028,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.29948507249355316
+                },
+                {
+                  "device": 1,
+                  "offset": 10092544,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.5091584781184793
+                },
+                {
+                  "device": 2,
+                  "offset": 20185088,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.344899476505816
+                },
+                {
+                  "device": 3,
+                  "offset": 30277632,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.4206547671929002
+                },
+                {
+                  "device": 4,
+                  "offset": 40370176,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.4809047542512417
+                },
+                {
+                  "device": 5,
+                  "offset": 50462720,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.49278908781707287
+                },
+                {
+                  "device": 6,
+                  "offset": 60555264,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.49726221803575754
+                },
+                {
+                  "device": 7,
+                  "offset": 70647808,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.3213562276214361
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.5154920304194093,
+                "startup_seconds": 6.807968020439148e-06,
+                "sampling_seconds": 0.5154852224513888
+              },
+              "estimates": {
+                "acceptance": 0.09453646059740672,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 3.2541847171607875e-05,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 8.326672684688674e-17,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 6.776263578034403e-20,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 9.71445146547012e-17,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 5.421010862427522e-20,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 15.95 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 6 %, 1622 MiB, 37, 108.73 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 23 %, 947 MiB, 34, 104.50 W, 2730 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 57 %, 947 MiB, 34, 102.26 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 947 MiB, 34, 106.37 W, 2805 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 29 %, 476 MiB, 32, 89.17 W, 2625 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 38 %, 476 MiB, 31, 98.94 W, 2715 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 26 %, 476 MiB, 34, 94.47 W, 2670 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 34, 92.25 W, 2760 MHz"
+        },
+        {
+          "seed": 20261029,
+          "order": [
+            "four",
+            "eight",
+            "single"
+          ],
+          "load": [
+            149.90185546875,
+            149.81103515625,
+            149.255859375
+          ],
+          "four": {
+            "wall_seconds": 0.8549908380955458,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261029,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.5287249768152833
+                },
+                {
+                  "device": 1,
+                  "offset": 20185088,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.8541194992139935
+                },
+                {
+                  "device": 2,
+                  "offset": 40370176,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.5684685837477446
+                },
+                {
+                  "device": 3,
+                  "offset": 60555264,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.5530990324914455
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.8549164095893502,
+                "startup_seconds": 5.61494380235672e-06,
+                "sampling_seconds": 0.8549107946455479
+              },
+              "estimates": {
+                "acceptance": 0.09451410558993942,
+                "error": 3.8704314789214673e-10,
+                "conditional_error": 4.095083432005155e-09
+              },
+              "standard_errors": {
+                "acceptance": 3.2538559300502036e-05,
+                "error": 3.8704314789214725e-10,
+                "conditional_error": 4.095083708635815e-09
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.5249137729406357,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261029,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.43045759573578835
+                },
+                {
+                  "device": 1,
+                  "offset": 10092544,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.3081588251516223
+                },
+                {
+                  "device": 2,
+                  "offset": 20185088,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.4096037782728672
+                },
+                {
+                  "device": 3,
+                  "offset": 30277632,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.5238693496212363
+                },
+                {
+                  "device": 4,
+                  "offset": 40370176,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.4606755431741476
+                },
+                {
+                  "device": 5,
+                  "offset": 50462720,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.44330739602446556
+                },
+                {
+                  "device": 6,
+                  "offset": 60555264,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.27201840933412313
+                },
+                {
+                  "device": 7,
+                  "offset": 70647808,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.23011079244315624
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.524830630980432,
+                "startup_seconds": 6.431713700294495e-06,
+                "sampling_seconds": 0.5248241992667317
+              },
+              "estimates": {
+                "acceptance": 0.0945141055899394,
+                "error": 3.8704314789214694e-10,
+                "conditional_error": 4.095083432005158e-09
+              },
+              "standard_errors": {
+                "acceptance": 3.253855930050204e-05,
+                "error": 3.8704314789214715e-10,
+                "conditional_error": 4.095083708635813e-09
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 2.1321299402043223,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261029,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 2.132039132528007
+              },
+              "estimates": {
+                "acceptance": 0.09451410558993938,
+                "error": 3.870431478921471e-10,
+                "conditional_error": 4.095083432005161e-09
+              },
+              "standard_errors": {
+                "acceptance": 3.25385593005021e-05,
+                "error": 3.870431478921472e-10,
+                "conditional_error": 4.095083708635815e-09
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 4.163336342344337e-17,
+                "error": 3.618915179919496e-25,
+                "conditional_error": 5.790264287871194e-24
+              },
+              "standard_errors": {
+                "acceptance": 6.098637220230962e-20,
+                "error": 5.169878828456423e-26,
+                "conditional_error": 0.0
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 2.7755575615628914e-17,
+                "error": 1.550963648536927e-25,
+                "conditional_error": 3.308722450212111e-24
+              },
+              "standard_errors": {
+                "acceptance": 5.421010862427522e-20,
+                "error": 5.169878828456423e-26,
+                "conditional_error": 1.6543612251060553e-24
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 15.62 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 74 %, 1622 MiB, 38, 194.22 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 947 MiB, 33, 71.01 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 947 MiB, 34, 62.64 W, 2520 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 947 MiB, 34, 58.25 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 32, 69.79 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 31, 77.17 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 34, 71.16 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 33, 71.41 W, 2520 MHz"
+        },
+        {
+          "seed": 20261030,
+          "order": [
+            "eight",
+            "single",
+            "four"
+          ],
+          "load": [
+            150.630859375,
+            149.9638671875,
+            149.30859375
+          ],
+          "eight": {
+            "wall_seconds": 0.6247515957802534,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261030,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.5826477156952024
+                },
+                {
+                  "device": 1,
+                  "offset": 10092544,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.3337378790602088
+                },
+                {
+                  "device": 2,
+                  "offset": 20185088,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.6235344773158431
+                },
+                {
+                  "device": 3,
+                  "offset": 30277632,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.6056342786177993
+                },
+                {
+                  "device": 4,
+                  "offset": 40370176,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.5791901703923941
+                },
+                {
+                  "device": 5,
+                  "offset": 50462720,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.5625786231830716
+                },
+                {
+                  "device": 6,
+                  "offset": 60555264,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.4546502260491252
+                },
+                {
+                  "device": 7,
+                  "offset": 70647808,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.5634458810091019
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.6246002493426204,
+                "startup_seconds": 1.0328367352485657e-05,
+                "sampling_seconds": 0.6245899209752679
+              },
+              "estimates": {
+                "acceptance": 0.09457513885935406,
+                "error": 7.74086295784294e-10,
+                "conditional_error": 8.184881408796706e-09
+              },
+              "standard_errors": {
+                "acceptance": 3.2547917373713166e-05,
+                "error": 7.740862957842936e-10,
+                "conditional_error": 8.184881927879294e-09
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 2.063897135667503,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261030,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 2.0638122959062457
+              },
+              "estimates": {
+                "acceptance": 0.09457513885935402,
+                "error": 7.740862957842942e-10,
+                "conditional_error": 8.184881408796712e-09
+              },
+              "standard_errors": {
+                "acceptance": 3.254791737371316e-05,
+                "error": 7.740862957842938e-10,
+                "conditional_error": 8.1848819278793e-09
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.6912802075967193,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261030,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.6902257706969976
+                },
+                {
+                  "device": 1,
+                  "offset": 20185088,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.626481675542891
+                },
+                {
+                  "device": 2,
+                  "offset": 40370176,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.4916104534640908
+                },
+                {
+                  "device": 3,
+                  "offset": 60555264,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.6535783093422651
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.6911206757649779,
+                "startup_seconds": 1.1902302503585815e-05,
+                "sampling_seconds": 0.6911087734624743
+              },
+              "estimates": {
+                "acceptance": 0.09457513885935405,
+                "error": 7.740862957842936e-10,
+                "conditional_error": 8.184881408796702e-09
+              },
+              "standard_errors": {
+                "acceptance": 3.2547917373713146e-05,
+                "error": 7.74086295784293e-10,
+                "conditional_error": 8.18488192787929e-09
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 2.7755575615628914e-17,
+                "error": 6.203854594147708e-25,
+                "conditional_error": 9.926167350636332e-24
+              },
+              "standard_errors": {
+                "acceptance": 1.3552527156068805e-20,
+                "error": 8.271806125530277e-25,
+                "conditional_error": 9.926167350636332e-24
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 4.163336342344337e-17,
+                "error": 2.0679515313825692e-25,
+                "conditional_error": 6.617444900424222e-24
+              },
+              "standard_errors": {
+                "acceptance": 6.776263578034403e-21,
+                "error": 2.0679515313825692e-25,
+                "conditional_error": 4.963083675318166e-24
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 16.48 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 54 %, 1622 MiB, 38, 137.57 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 38 %, 947 MiB, 34, 98.32 W, 2730 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 947 MiB, 35, 103.25 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 13 %, 947 MiB, 35, 104.61 W, 2805 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 32, 64.23 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 31, 70.16 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 34, 71.33 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 33, 62.77 W, 2520 MHz"
+        },
+        {
+          "seed": 20261031,
+          "order": [
+            "single",
+            "four",
+            "eight"
+          ],
+          "load": [
+            151.14111328125,
+            150.0810546875,
+            149.35009765625
+          ],
+          "single": {
+            "wall_seconds": 2.0476460522040725,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261031,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 2.0475600566715
+              },
+              "estimates": {
+                "acceptance": 0.09451451110230234,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 3.2538738939395864e-05,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "four": {
+            "wall_seconds": 0.8994031688198447,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261031,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.7393736336380243
+                },
+                {
+                  "device": 1,
+                  "offset": 20185088,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.8982956912368536
+                },
+                {
+                  "device": 2,
+                  "offset": 40370176,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.6654125237837434
+                },
+                {
+                  "device": 3,
+                  "offset": 60555264,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.5957255121320486
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.8992297668009996,
+                "startup_seconds": 1.2090429663658142e-05,
+                "sampling_seconds": 0.899217676371336
+              },
+              "estimates": {
+                "acceptance": 0.0945145111023025,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 3.2538738939395844e-05,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.5617019943892956,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261031,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.5606724331155419
+                },
+                {
+                  "device": 1,
+                  "offset": 10092544,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.4343526056036353
+                },
+                {
+                  "device": 2,
+                  "offset": 20185088,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.48482268676161766
+                },
+                {
+                  "device": 3,
+                  "offset": 30277632,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.42217867821455
+                },
+                {
+                  "device": 4,
+                  "offset": 40370176,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.4540007393807173
+                },
+                {
+                  "device": 5,
+                  "offset": 50462720,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.25729416869580746
+                },
+                {
+                  "device": 6,
+                  "offset": 60555264,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.45424105133861303
+                },
+                {
+                  "device": 7,
+                  "offset": 70647808,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.2708788076415658
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.5615965416654944,
+                "startup_seconds": 7.813796401023865e-06,
+                "sampling_seconds": 0.5615887278690934
+              },
+              "estimates": {
+                "acceptance": 0.09451451110230251,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 3.253873893939583e-05,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 1.5265566588595902e-16,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 2.0328790734103208e-20,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 1.6653345369377348e-16,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 3.3881317890172014e-20,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 16.71 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 34 %, 1622 MiB, 38, 106.69 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 1 %, 947 MiB, 34, 115.96 W, 2730 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 10 %, 947 MiB, 35, 95.54 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 947 MiB, 35, 106.18 W, 2805 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 33, 92.23 W, 2745 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 32, 98.21 W, 2715 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 4 %, 476 MiB, 35, 93.87 W, 2670 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 34, 87.73 W, 2760 MHz"
+        },
+        {
+          "seed": 20261032,
+          "order": [
+            "four",
+            "eight",
+            "single"
+          ],
+          "load": [
+            149.68798828125,
+            149.79736328125,
+            149.26220703125
+          ],
+          "four": {
+            "wall_seconds": 0.7597610922530293,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261032,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.6638386538252234
+                },
+                {
+                  "device": 1,
+                  "offset": 20185088,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.7586620654910803
+                },
+                {
+                  "device": 2,
+                  "offset": 40370176,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.6644452093169093
+                },
+                {
+                  "device": 3,
+                  "offset": 60555264,
+                  "shots": 20185088,
+                  "sampling_seconds": 0.6810086788609624
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.7596792317926884,
+                "startup_seconds": 6.355345249176025e-06,
+                "sampling_seconds": 0.7596728764474392
+              },
+              "estimates": {
+                "acceptance": 0.09453523923437315,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 3.254195830199271e-05,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "eight": {
+            "wall_seconds": 0.5634095082059503,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261032,
+              "offset": 0,
+              "batch_size": 65536,
+              "devices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "shards": [
+                {
+                  "device": 0,
+                  "offset": 0,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.4366827830672264
+                },
+                {
+                  "device": 1,
+                  "offset": 10092544,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.2371892537921667
+                },
+                {
+                  "device": 2,
+                  "offset": 20185088,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.4103118646889925
+                },
+                {
+                  "device": 3,
+                  "offset": 30277632,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.4526728745549917
+                },
+                {
+                  "device": 4,
+                  "offset": 40370176,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.5622736504301429
+                },
+                {
+                  "device": 5,
+                  "offset": 50462720,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.45517066679894924
+                },
+                {
+                  "device": 6,
+                  "offset": 60555264,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.4284908641129732
+                },
+                {
+                  "device": 7,
+                  "offset": 70647808,
+                  "shots": 10092544,
+                  "sampling_seconds": 0.2710047410801053
+                }
+              ],
+              "timings": {
+                "total_seconds": 0.5633214684203267,
+                "startup_seconds": 7.167458534240723e-06,
+                "sampling_seconds": 0.5633143009617925
+              },
+              "estimates": {
+                "acceptance": 0.09453523923437315,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 3.25419583019927e-05,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "single": {
+            "wall_seconds": 2.442282121628523,
+            "result": {
+              "status": "complete",
+              "requested": 80740352,
+              "completed": 80740352,
+              "seed": 20261032,
+              "offset": 0,
+              "batch_size": 65536,
+              "timings": {
+                "sampling_seconds": 2.4421928925439715
+              },
+              "estimates": {
+                "acceptance": 0.094535239234373,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 3.2541958301992677e-05,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "absolute_differences": {
+            "four": {
+              "estimates": {
+                "acceptance": 1.5265566588595902e-16,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 3.3881317890172014e-20,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            },
+            "eight": {
+              "estimates": {
+                "acceptance": 1.5265566588595902e-16,
+                "error": 0.0,
+                "conditional_error": 0.0
+              },
+              "standard_errors": {
+                "acceptance": 2.0328790734103208e-20,
+                "error": 0.0,
+                "conditional_error": 0.0
+              }
+            }
+          },
+          "inventory_after": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 15.81 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 88 %, 1622 MiB, 39, 187.38 W, 2730 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 947 MiB, 33, 67.49 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 947 MiB, 34, 58.54 W, 2520 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 947 MiB, 34, 64.11 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 32, 64.02 W, 2520 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 31, 73.60 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 34, 70.08 W, 2520 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 476 MiB, 34, 67.37 W, 2520 MHz"
+        }
+      ],
+      "worker_pids": [
+        3489494,
+        3492724,
+        3492725,
+        3492726,
+        3492727,
+        3492760,
+        3492761,
+        3492762,
+        3492763,
+        3492764,
+        3492765,
+        3492766,
+        3492767
+      ],
+      "single": {
+        "median_seconds": 2.1321299402043223,
+        "min_seconds": 2.0476460522040725,
+        "max_seconds": 2.6057328013703227,
+        "shots_per_second": 37868401.206477426
+      },
+      "four": {
+        "median_seconds": 0.8549908380955458,
+        "min_seconds": 0.6912802075967193,
+        "max_seconds": 0.9553481098264456,
+        "shots_per_second": 94434172.16007315
+      },
+      "eight": {
+        "median_seconds": 0.5617019943892956,
+        "min_seconds": 0.5155932027846575,
+        "max_seconds": 0.6247515957802534,
+        "shots_per_second": 143742327.43785086
+      },
+      "four_over_single": 2.4937459504870807,
+      "eight_over_single": 3.7958382941517903,
+      "eight_over_four": 1.5221431410887643,
+      "load_after": [
+        150.27392578125,
+        149.9169921875,
+        149.30419921875
+      ]
+    }
+  ],
+  "cupy": "14.2.0",
+  "numpy": "2.1.3",
+  "cuda_runtime": 12090,
+  "cuda_driver": 12060,
+  "finished_at": "2026-10-28T04:31:16.386895+00:00",
+  "final_inventory": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 15.05 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 4 %, 598 MiB, 37, 63.67 W, 2520 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 4 %, 4 MiB, 33, 64.42 W, 2520 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 4 %, 4 MiB, 34, 56.54 W, 2520 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 4 %, 4 MiB, 34, 59.32 W, 2520 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 32, 54.89 W, 570 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 31, 71.29 W, 2520 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 33, 44.34 W, 465 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 4 MiB, 33, 62.90 W, 2520 MHz"
+}
