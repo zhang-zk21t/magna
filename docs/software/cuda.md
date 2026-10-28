@@ -58,6 +58,90 @@ The first call also compiles the GPU code, so reuse one sampler for repeated run
 After changing the circuit, task, sampling or options, compile again and create a new sampler.
 Use a sampler from one thread at a time.
 
+## Multiple GPUs on one host (experimental)
+
+`MultiGpuCudaSampler` assigns disjoint draw intervals to explicitly selected devices.
+Each device has its own persistent process and CUDA sampler. Supported tasks and
+per-draw arithmetic are the same as for `CudaSampler`; the CUDA kernels are unchanged.
+
+Save this example as a Python script and run it with the CUDA extra installed:
+
+```python
+from magna import compile_circuit
+from magna.cuda_multi import MultiGpuCudaSampler
+
+
+def main():
+    compiled = compile_circuit(
+        "examples/bh100-T/physical.magna",
+        task="examples/bh100-T/task.json",
+        sampling={"method": "importance", "proposal_scale": "500/77"},
+    )
+    with MultiGpuCudaSampler(compiled, devices=range(8), timeout=600) as sampler:
+        result = sampler.run(16_777_216, seed=7)
+        print(result["estimates"], result["standard_errors"])
+        # Reuse processes, compiled plans and device allocations.
+        continued = sampler.run(16_777_216, seed=7, offset=16_777_216)
+        print(continued["estimates"])
+
+
+if __name__ == "__main__":
+    main()
+```
+
+The `__main__` guard is required because workers use Python's `spawn` start method
+on every platform. Run from an importable script, not an interactive notebook cell.
+The compiled circuit is snapshotted as source text and configuration, then compiled
+independently in each worker. Target and recovery files are resolved before spawning.
+No native handle or CUDA context crosses process boundaries. Each process consumes
+its own host and device memory; GPU memory is not pooled.
+
+Device IDs are distinct nonnegative logical indices as seen by CuPy, after any
+`CUDA_VISIBLE_DEVICES` filtering. The sampler does not reserve devices or check for
+other users: select devices only after checking the server's allocation policy and
+occupancy. `devices` is required; the sampler never silently uses all available GPUs.
+
+`run` accepts the same `shots`, `seed`, `offset` and `batch_size` as `CudaSampler`.
+Batch size applies separately to each GPU. Empty runs launch no workers; when there
+are fewer draws than devices, only the first devices with nonempty shards are started.
+Later calls start additional workers as needed and retain previously started ones.
+The same seed and global interval select the same faults for any device count or
+device ordering, but floating-point reduction order can change the last digits.
+Centered covariance factors are merged before computing the overall conditional error
+and standard errors; per-device ratios and error bars are not averaged.
+
+Results add `devices`, `shards` (device, offset, shots and sampling seconds), and
+`timings.startup_seconds` and `timings.total_seconds`. `sampling_seconds` is elapsed
+parent wall time after worker startup, including dispatch and aggregation. First-use
+CUDA JIT compilation is included in sampling time. Per-shard timings overlap and
+must not be added to obtain wall time. Warm up each device before timing throughput;
+short tasks may be slower than a single GPU.
+
+Use the context manager or call `close()` to release workers and GPU allocations.
+Do not share one instance between concurrent calls or across a fork. A child error,
+unexpected exit, timeout or interruption closes the pool and raises; it does not
+return partial estimates or silently fall back to CPU. Construct a new sampler to retry.
+Invalid run arguments are rejected before dispatch and leave the pool usable.
+`timeout=None` (the default) has no deadline; a positive timeout is in wall-clock
+seconds per call, including worker startup. Cleanup can add a short delay.
+
+The development benchmark `scripts/benchmark_multi_gpu.py` compares warmed-up
+1/2/4/8-device runs and saves timings and numerical agreement checks as JSON:
+
+```sh
+PYTHONPATH=core python scripts/benchmark_multi_gpu.py --task examples/bh100-T \
+    --devices 0 1 2 3 4 5 6 7 --counts 1 2 4 8 --proposal-scale 500/77 \
+    --shots 16777216 --repeat 3 --output multi-gpu-results.json
+```
+
+It checks all GPUs reported by `nvidia-smi` before starting and between device-count
+configurations, and skips initial execution if a compute process, utilization or
+unexplained memory use is present. These checks are not a reservation and cannot
+prevent other users from starting work. The library itself does not check occupancy.
+Device regression tests require an explicit allocation, for example
+`MAGNA_TEST_CUDA_DEVICES=0,1`; ordinary tests exercise real spawned workers using
+CPU references and do not start CUDA work through the multi-GPU interface.
+
 ## Supported tasks
 
 The CUDA sampler supports a task when:

@@ -7,6 +7,8 @@ Notable changes to magna, newest first.
 
 ### Added
 
+- Experimental `magna.cuda_multi.MultiGpuCudaSampler` distributes draw intervals across
+  explicit local GPU devices, reuses worker processes, and merges centered statistics.
 - An experimental CUDA sampler, `magna.cuda_sampler.CudaSampler`, runs physical and importance sampling
   of supported tasks on an NVIDIA GPU. Install it with `pip install ".[cuda12]"`.
 - The README explains how to cite magna.
