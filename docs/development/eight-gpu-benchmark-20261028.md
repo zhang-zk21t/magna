@@ -15,6 +15,10 @@ No implementation or CUDA kernel changes were needed for eight devices.
 This work is confined to the fork branch `experiment/multi-gpu-sampling`;
 no upstream pull request was created.
 
+The later [batch-size and memory experiment](batch-memory-benchmark-20261028.md)
+tests larger batches, allocation peaks and new interleaved single/eight-device
+baselines. The measurements below remain the original batch-65,536 session.
+
 ## GPU throughput
 
 Rates count attempted Monte Carlo draws, including rejected draws. Each row

@@ -1,0 +1,2158 @@
+{
+  "status": "complete",
+  "source_commit": "d128490e3c1ecef10379d5969a9d9b378af3bb07",
+  "driver_sha256": "a70277295010beb17e73f2bbdfc6f796db1ea4007431f57285ebe1d136b24760",
+  "helper_sha256": "0336febd9e4698a4ab417d5e1ea7ecdb6d15bfd7e9706982917b9fa111297810",
+  "reference_sha256": "c79c76b6b516ae262d3631391f52f75b2c7bda5e48a02712cfd65b4f61b031dd",
+  "timestamp": "2026-10-28T06:14:14.115323+00:00",
+  "python": "3.13.5",
+  "platform": "Linux-5.15.0-187-generic-x86_64-with-glibc2.35",
+  "selected_gpu_uuids": [
+    "GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f",
+    "GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34",
+    "GPU-25f53d69-f560-09f7-175b-09f973b4e12a",
+    "GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95",
+    "GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d",
+    "GPU-747a9db3-132e-7612-72bf-eff539d02fe9",
+    "GPU-d3877180-08d1-ba1e-02ef-a78253f531bd",
+    "GPU-c5f989b3-f417-19a2-1a18-562f041a2e05"
+  ],
+  "initial_inventory": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 27, 14.21 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 40, 63.84 W, 2520 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 40, 77.91 W, 2715 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 39, 65.72 W, 495 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 41, 76.84 W, 2790 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 39, 77.68 W, 585 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 39, 82.99 W, 2700 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 41, 64.36 W, 585 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 42, 77.57 W, 2745 MHz",
+  "initial_load": [
+    178.22705078125,
+    179.10205078125,
+    177.5419921875
+  ],
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127
+  ],
+  "batches": [
+    65536,
+    1000000,
+    4194304,
+    50331648
+  ],
+  "counts": [
+    8
+  ],
+  "repeats": 3,
+  "experimental_limit": 50331648,
+  "pool_limit_bytes": 19327352832,
+  "tasks": [
+    {
+      "task": "color3",
+      "sampling": {
+        "method": "physical"
+      },
+      "shots": 536870912,
+      "configurations": [
+        {
+          "count": 8,
+          "batch_size": 65536,
+          "memory": [
+            {
+              "device": 0,
+              "batch_size": 65536,
+              "shots": 131072,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 435486720,
+              "peak_live_pool_bytes": 15010816,
+              "peak_reserved_pool_bytes": 19401216,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.0029183076694607735
+            },
+            {
+              "device": 1,
+              "batch_size": 65536,
+              "shots": 131072,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 435486720,
+              "peak_live_pool_bytes": 15010816,
+              "peak_reserved_pool_bytes": 19401216,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.010789112187922001
+            },
+            {
+              "device": 2,
+              "batch_size": 65536,
+              "shots": 131072,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 435486720,
+              "peak_live_pool_bytes": 15010816,
+              "peak_reserved_pool_bytes": 19401216,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.015221746638417244
+            },
+            {
+              "device": 3,
+              "batch_size": 65536,
+              "shots": 131072,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 435486720,
+              "peak_live_pool_bytes": 15010816,
+              "peak_reserved_pool_bytes": 19401216,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.01310296356678009
+            },
+            {
+              "device": 4,
+              "batch_size": 65536,
+              "shots": 131072,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 435486720,
+              "peak_live_pool_bytes": 15010816,
+              "peak_reserved_pool_bytes": 19401216,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.0021711932495236397
+            },
+            {
+              "device": 5,
+              "batch_size": 65536,
+              "shots": 131072,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 435486720,
+              "peak_live_pool_bytes": 15010816,
+              "peak_reserved_pool_bytes": 19401216,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.0019717514514923096
+            },
+            {
+              "device": 6,
+              "batch_size": 65536,
+              "shots": 131072,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 435486720,
+              "peak_live_pool_bytes": 15010816,
+              "peak_reserved_pool_bytes": 19401216,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.002046555280685425
+            },
+            {
+              "device": 7,
+              "batch_size": 65536,
+              "shots": 131072,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 435486720,
+              "peak_live_pool_bytes": 15010816,
+              "peak_reserved_pool_bytes": 19401216,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.011642422527074814
+            }
+          ],
+          "rounds": [
+            {
+              "seed": 20261028,
+              "order": [
+                65536,
+                1000000,
+                4194304,
+                50331648
+              ],
+              "wall_seconds": 0.7992847515270114,
+              "result": {
+                "status": "complete",
+                "requested": 536870912,
+                "completed": 536870912,
+                "seed": 20261028,
+                "offset": 0,
+                "batch_size": 65536,
+                "devices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "shards": [
+                  {
+                    "device": 0,
+                    "offset": 0,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.6391651220619678
+                  },
+                  {
+                    "device": 1,
+                    "offset": 67108864,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.7217307854443789
+                  },
+                  {
+                    "device": 2,
+                    "offset": 134217728,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.6769757475703955
+                  },
+                  {
+                    "device": 3,
+                    "offset": 201326592,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.6252796379849315
+                  },
+                  {
+                    "device": 4,
+                    "offset": 268435456,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.798522143624723
+                  },
+                  {
+                    "device": 5,
+                    "offset": 335544320,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.6437767073512077
+                  },
+                  {
+                    "device": 6,
+                    "offset": 402653184,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.6457195803523064
+                  },
+                  {
+                    "device": 7,
+                    "offset": 469762048,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.6985609885305166
+                  }
+                ],
+                "timings": {
+                  "total_seconds": 0.7992316884920001,
+                  "startup_seconds": 4.131346940994263e-06,
+                  "sampling_seconds": 0.7992275571450591
+                },
+                "estimates": {
+                  "acceptance": 0.6867830826668064,
+                  "error": 6.179325282573699e-07,
+                  "conditional_error": 8.997491986231125e-07
+                },
+                "standard_errors": {
+                  "acceptance": 2.0015266605757904e-05,
+                  "error": 1.9350855660308676e-08,
+                  "conditional_error": 2.817611526856734e-08
+                }
+              },
+              "absolute_differences": {
+                "estimates": {
+                  "acceptance": 0.0,
+                  "error": 0.0,
+                  "conditional_error": 0.0
+                },
+                "standard_errors": {
+                  "acceptance": 0.0,
+                  "error": 0.0,
+                  "conditional_error": 0.0
+                }
+              },
+              "load": [
+                182.28564453125,
+                179.95263671875,
+                177.83642578125
+              ]
+            },
+            {
+              "seed": 20261029,
+              "order": [
+                1000000,
+                4194304,
+                50331648,
+                65536
+              ],
+              "wall_seconds": 0.8845584876835346,
+              "result": {
+                "status": "complete",
+                "requested": 536870912,
+                "completed": 536870912,
+                "seed": 20261029,
+                "offset": 0,
+                "batch_size": 65536,
+                "devices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "shards": [
+                  {
+                    "device": 0,
+                    "offset": 0,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.7125483509153128
+                  },
+                  {
+                    "device": 1,
+                    "offset": 67108864,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.6236337563022971
+                  },
+                  {
+                    "device": 2,
+                    "offset": 134217728,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.6888880394399166
+                  },
+                  {
+                    "device": 3,
+                    "offset": 201326592,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.6428412888199091
+                  },
+                  {
+                    "device": 4,
+                    "offset": 268435456,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.8838129369542003
+                  },
+                  {
+                    "device": 5,
+                    "offset": 335544320,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.6187956808134913
+                  },
+                  {
+                    "device": 6,
+                    "offset": 402653184,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.7161098849028349
+                  },
+                  {
+                    "device": 7,
+                    "offset": 469762048,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5278021050617099
+                  }
+                ],
+                "timings": {
+                  "total_seconds": 0.8845103746280074,
+                  "startup_seconds": 3.861263394355774e-06,
+                  "sampling_seconds": 0.8845065133646131
+                },
+                "estimates": {
+                  "acceptance": 0.6867890794528649,
+                  "error": 6.378395482897762e-07,
+                  "conditional_error": 9.28726980921006e-07
+                },
+                "standard_errors": {
+                  "acceptance": 2.001516460328944e-05,
+                  "error": 2.0665258919575717e-08,
+                  "conditional_error": 3.008970515705892e-08
+                }
+              },
+              "absolute_differences": {
+                "estimates": {
+                  "acceptance": 1.1102230246251565e-16,
+                  "error": 3.1763735522036263e-22,
+                  "conditional_error": 3.1763735522036263e-22
+                },
+                "standard_errors": {
+                  "acceptance": 1.0164395367051604e-20,
+                  "error": 6.617444900424222e-24,
+                  "conditional_error": 6.617444900424222e-24
+                }
+              },
+              "load": [
+                183.22412109375,
+                180.18603515625,
+                177.92333984375
+              ]
+            },
+            {
+              "seed": 20261030,
+              "order": [
+                4194304,
+                50331648,
+                65536,
+                1000000
+              ],
+              "wall_seconds": 0.7738085370510817,
+              "result": {
+                "status": "complete",
+                "requested": 536870912,
+                "completed": 536870912,
+                "seed": 20261030,
+                "offset": 0,
+                "batch_size": 65536,
+                "devices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "shards": [
+                  {
+                    "device": 0,
+                    "offset": 0,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.6289306851103902
+                  },
+                  {
+                    "device": 1,
+                    "offset": 67108864,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5327297244220972
+                  },
+                  {
+                    "device": 2,
+                    "offset": 134217728,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.48434207029640675
+                  },
+                  {
+                    "device": 3,
+                    "offset": 201326592,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5787069424986839
+                  },
+                  {
+                    "device": 4,
+                    "offset": 268435456,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5961481612175703
+                  },
+                  {
+                    "device": 5,
+                    "offset": 335544320,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.7730192625895143
+                  },
+                  {
+                    "device": 6,
+                    "offset": 402653184,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.7482280470430851
+                  },
+                  {
+                    "device": 7,
+                    "offset": 469762048,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5985101759433746
+                  }
+                ],
+                "timings": {
+                  "total_seconds": 0.7737521128728986,
+                  "startup_seconds": 4.172325134277344e-06,
+                  "sampling_seconds": 0.7737479405477643
+                },
+                "estimates": {
+                  "acceptance": 0.6867768933298062,
+                  "error": 6.032641977071762e-07,
+                  "conditional_error": 8.783990893786154e-07
+                },
+                "standard_errors": {
+                  "acceptance": 2.0015378913883455e-05,
+                  "error": 1.8583455538893986e-08,
+                  "conditional_error": 2.705897644419762e-08
+                }
+              },
+              "absolute_differences": {
+                "estimates": {
+                  "acceptance": 4.440892098500626e-16,
+                  "error": 2.117582368135751e-22,
+                  "conditional_error": 8.470329472543003e-22
+                },
+                "standard_errors": {
+                  "acceptance": 6.776263578034403e-21,
+                  "error": 9.926167350636332e-24,
+                  "conditional_error": 2.9778502051908996e-23
+                }
+              },
+              "load": [
+                184.72802734375,
+                180.54833984375,
+                178.052734375
+              ]
+            }
+          ],
+          "median_seconds": 0.7992847515270114,
+          "min_seconds": 0.7738085370510817,
+          "max_seconds": 0.8845584876835346,
+          "shots_per_second": 671689170.8171874
+        },
+        {
+          "count": 8,
+          "batch_size": 1000000,
+          "memory": [
+            {
+              "device": 0,
+              "batch_size": 1000000,
+              "shots": 2000000,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 712310784,
+              "peak_live_pool_bytes": 227134464,
+              "peak_reserved_pool_bytes": 289804288,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.013615211471915245
+            },
+            {
+              "device": 1,
+              "batch_size": 1000000,
+              "shots": 2000000,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 712310784,
+              "peak_live_pool_bytes": 227134464,
+              "peak_reserved_pool_bytes": 289804288,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.008358126506209373
+            },
+            {
+              "device": 2,
+              "batch_size": 1000000,
+              "shots": 2000000,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 712310784,
+              "peak_live_pool_bytes": 227134464,
+              "peak_reserved_pool_bytes": 289804288,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.007460298947989941
+            },
+            {
+              "device": 3,
+              "batch_size": 1000000,
+              "shots": 2000000,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 712310784,
+              "peak_live_pool_bytes": 227134464,
+              "peak_reserved_pool_bytes": 289804288,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.007174430415034294
+            },
+            {
+              "device": 4,
+              "batch_size": 1000000,
+              "shots": 2000000,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 712310784,
+              "peak_live_pool_bytes": 227134464,
+              "peak_reserved_pool_bytes": 289804288,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.007450666278600693
+            },
+            {
+              "device": 5,
+              "batch_size": 1000000,
+              "shots": 2000000,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 712310784,
+              "peak_live_pool_bytes": 227134464,
+              "peak_reserved_pool_bytes": 289804288,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.007642445154488087
+            },
+            {
+              "device": 6,
+              "batch_size": 1000000,
+              "shots": 2000000,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 712310784,
+              "peak_live_pool_bytes": 227134464,
+              "peak_reserved_pool_bytes": 289804288,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.008034011349081993
+            },
+            {
+              "device": 7,
+              "batch_size": 1000000,
+              "shots": 2000000,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 712310784,
+              "peak_live_pool_bytes": 227134464,
+              "peak_reserved_pool_bytes": 289804288,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.007608082145452499
+            }
+          ],
+          "rounds": [
+            {
+              "seed": 20261028,
+              "order": [
+                65536,
+                1000000,
+                4194304,
+                50331648
+              ],
+              "wall_seconds": 0.4649925008416176,
+              "result": {
+                "status": "complete",
+                "requested": 536870912,
+                "completed": 536870912,
+                "seed": 20261028,
+                "offset": 0,
+                "batch_size": 1000000,
+                "devices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "shards": [
+                  {
+                    "device": 0,
+                    "offset": 0,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.34881104808300734
+                  },
+                  {
+                    "device": 1,
+                    "offset": 67108864,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4455732246860862
+                  },
+                  {
+                    "device": 2,
+                    "offset": 134217728,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.2849102793261409
+                  },
+                  {
+                    "device": 3,
+                    "offset": 201326592,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4563739327713847
+                  },
+                  {
+                    "device": 4,
+                    "offset": 268435456,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.464233573526144
+                  },
+                  {
+                    "device": 5,
+                    "offset": 335544320,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4430448776111007
+                  },
+                  {
+                    "device": 6,
+                    "offset": 402653184,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.23610817454755306
+                  },
+                  {
+                    "device": 7,
+                    "offset": 469762048,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.2715520476922393
+                  }
+                ],
+                "timings": {
+                  "total_seconds": 0.464932213537395,
+                  "startup_seconds": 3.7783756852149963e-06,
+                  "sampling_seconds": 0.4649284351617098
+                },
+                "estimates": {
+                  "acceptance": 0.6867830826668069,
+                  "error": 6.179325282573701e-07,
+                  "conditional_error": 8.997491986231122e-07
+                },
+                "standard_errors": {
+                  "acceptance": 2.0015266605757904e-05,
+                  "error": 1.9350855660308666e-08,
+                  "conditional_error": 2.8176115268567308e-08
+                }
+              },
+              "absolute_differences": {
+                "estimates": {
+                  "acceptance": 4.440892098500626e-16,
+                  "error": 2.117582368135751e-22,
+                  "conditional_error": 3.1763735522036263e-22
+                },
+                "standard_errors": {
+                  "acceptance": 0.0,
+                  "error": 9.926167350636332e-24,
+                  "conditional_error": 3.3087224502121107e-23
+                }
+              },
+              "load": [
+                182.28564453125,
+                179.95263671875,
+                177.83642578125
+              ]
+            },
+            {
+              "seed": 20261029,
+              "order": [
+                1000000,
+                4194304,
+                50331648,
+                65536
+              ],
+              "wall_seconds": 0.4522071275860071,
+              "result": {
+                "status": "complete",
+                "requested": 536870912,
+                "completed": 536870912,
+                "seed": 20261029,
+                "offset": 0,
+                "batch_size": 1000000,
+                "devices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "shards": [
+                  {
+                    "device": 0,
+                    "offset": 0,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4315979443490505
+                  },
+                  {
+                    "device": 1,
+                    "offset": 67108864,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.30177434999495745
+                  },
+                  {
+                    "device": 2,
+                    "offset": 134217728,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.352976038120687
+                  },
+                  {
+                    "device": 3,
+                    "offset": 201326592,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4375200793147087
+                  },
+                  {
+                    "device": 4,
+                    "offset": 268435456,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.45152340829372406
+                  },
+                  {
+                    "device": 5,
+                    "offset": 335544320,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4285507267341018
+                  },
+                  {
+                    "device": 6,
+                    "offset": 402653184,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4357741270214319
+                  },
+                  {
+                    "device": 7,
+                    "offset": 469762048,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.314037018455565
+                  }
+                ],
+                "timings": {
+                  "total_seconds": 0.45215187780559063,
+                  "startup_seconds": 3.886409103870392e-06,
+                  "sampling_seconds": 0.45214799139648676
+                },
+                "estimates": {
+                  "acceptance": 0.6867890794528648,
+                  "error": 6.378395482897758e-07,
+                  "conditional_error": 9.287269809210056e-07
+                },
+                "standard_errors": {
+                  "acceptance": 2.001516460328943e-05,
+                  "error": 2.066525891957571e-08,
+                  "conditional_error": 3.0089705157058916e-08
+                }
+              },
+              "absolute_differences": {
+                "estimates": {
+                  "acceptance": 0.0,
+                  "error": 0.0,
+                  "conditional_error": 0.0
+                },
+                "standard_errors": {
+                  "acceptance": 0.0,
+                  "error": 0.0,
+                  "conditional_error": 0.0
+                }
+              },
+              "load": [
+                183.22412109375,
+                180.18603515625,
+                177.92333984375
+              ]
+            },
+            {
+              "seed": 20261030,
+              "order": [
+                4194304,
+                50331648,
+                65536,
+                1000000
+              ],
+              "wall_seconds": 0.5187488738447428,
+              "result": {
+                "status": "complete",
+                "requested": 536870912,
+                "completed": 536870912,
+                "seed": 20261030,
+                "offset": 0,
+                "batch_size": 1000000,
+                "devices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "shards": [
+                  {
+                    "device": 0,
+                    "offset": 0,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3592095701023936
+                  },
+                  {
+                    "device": 1,
+                    "offset": 67108864,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.25026743579655886
+                  },
+                  {
+                    "device": 2,
+                    "offset": 134217728,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.510295725427568
+                  },
+                  {
+                    "device": 3,
+                    "offset": 201326592,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3582989638671279
+                  },
+                  {
+                    "device": 4,
+                    "offset": 268435456,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.44034221954643726
+                  },
+                  {
+                    "device": 5,
+                    "offset": 335544320,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4963868437334895
+                  },
+                  {
+                    "device": 6,
+                    "offset": 402653184,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.35107492562383413
+                  },
+                  {
+                    "device": 7,
+                    "offset": 469762048,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3094037901610136
+                  }
+                ],
+                "timings": {
+                  "total_seconds": 0.5186893846839666,
+                  "startup_seconds": 4.825182259082794e-06,
+                  "sampling_seconds": 0.5186845595017076
+                },
+                "estimates": {
+                  "acceptance": 0.6867768933298067,
+                  "error": 6.032641977071763e-07,
+                  "conditional_error": 8.783990893786148e-07
+                },
+                "standard_errors": {
+                  "acceptance": 2.0015378913883452e-05,
+                  "error": 1.8583455538893986e-08,
+                  "conditional_error": 2.70589764441976e-08
+                }
+              },
+              "absolute_differences": {
+                "estimates": {
+                  "acceptance": 1.1102230246251565e-16,
+                  "error": 3.1763735522036263e-22,
+                  "conditional_error": 3.1763735522036263e-22
+                },
+                "standard_errors": {
+                  "acceptance": 3.3881317890172014e-21,
+                  "error": 9.926167350636332e-24,
+                  "conditional_error": 9.926167350636332e-24
+                }
+              },
+              "load": [
+                184.72802734375,
+                180.54833984375,
+                178.052734375
+              ]
+            }
+          ],
+          "median_seconds": 0.4649925008416176,
+          "min_seconds": 0.4522071275860071,
+          "max_seconds": 0.5187488738447428,
+          "shots_per_second": 1154579721.2391284
+        },
+        {
+          "count": 8,
+          "batch_size": 4194304,
+          "memory": [
+            {
+              "device": 0,
+              "batch_size": 4194304,
+              "shots": 8388608,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 1618280448,
+              "peak_live_pool_bytes": 952241152,
+              "peak_reserved_pool_bytes": 1203374592,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.07550318166613579
+            },
+            {
+              "device": 1,
+              "batch_size": 4194304,
+              "shots": 8388608,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 1618280448,
+              "peak_live_pool_bytes": 952241152,
+              "peak_reserved_pool_bytes": 1203374592,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.06037448067218065
+            },
+            {
+              "device": 2,
+              "batch_size": 4194304,
+              "shots": 8388608,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 1618280448,
+              "peak_live_pool_bytes": 952241152,
+              "peak_reserved_pool_bytes": 1203374592,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.060224974527955055
+            },
+            {
+              "device": 3,
+              "batch_size": 4194304,
+              "shots": 8388608,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 1618280448,
+              "peak_live_pool_bytes": 952241152,
+              "peak_reserved_pool_bytes": 1203374592,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.0752378199249506
+            },
+            {
+              "device": 4,
+              "batch_size": 4194304,
+              "shots": 8388608,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 1618280448,
+              "peak_live_pool_bytes": 952241152,
+              "peak_reserved_pool_bytes": 1203374592,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.08397704735398293
+            },
+            {
+              "device": 5,
+              "batch_size": 4194304,
+              "shots": 8388608,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 1618280448,
+              "peak_live_pool_bytes": 952241152,
+              "peak_reserved_pool_bytes": 1203374592,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.07942706067115068
+            },
+            {
+              "device": 6,
+              "batch_size": 4194304,
+              "shots": 8388608,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 1618280448,
+              "peak_live_pool_bytes": 952241152,
+              "peak_reserved_pool_bytes": 1203374592,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.05926539748907089
+            },
+            {
+              "device": 7,
+              "batch_size": 4194304,
+              "shots": 8388608,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 1618280448,
+              "peak_live_pool_bytes": 952241152,
+              "peak_reserved_pool_bytes": 1203374592,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.08363613579422235
+            }
+          ],
+          "rounds": [
+            {
+              "seed": 20261028,
+              "order": [
+                65536,
+                1000000,
+                4194304,
+                50331648
+              ],
+              "wall_seconds": 0.5798624455928802,
+              "result": {
+                "status": "complete",
+                "requested": 536870912,
+                "completed": 536870912,
+                "seed": 20261028,
+                "offset": 0,
+                "batch_size": 4194304,
+                "devices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "shards": [
+                  {
+                    "device": 0,
+                    "offset": 0,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5230293944478035
+                  },
+                  {
+                    "device": 1,
+                    "offset": 67108864,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.473027715459466
+                  },
+                  {
+                    "device": 2,
+                    "offset": 134217728,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4827600698918104
+                  },
+                  {
+                    "device": 3,
+                    "offset": 201326592,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.49492628034204245
+                  },
+                  {
+                    "device": 4,
+                    "offset": 268435456,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5789337242022157
+                  },
+                  {
+                    "device": 5,
+                    "offset": 335544320,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4908269252628088
+                  },
+                  {
+                    "device": 6,
+                    "offset": 402653184,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4988650232553482
+                  },
+                  {
+                    "device": 7,
+                    "offset": 469762048,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.39152163453400135
+                  }
+                ],
+                "timings": {
+                  "total_seconds": 0.5797868827357888,
+                  "startup_seconds": 5.846843123435974e-06,
+                  "sampling_seconds": 0.5797810358926654
+                },
+                "estimates": {
+                  "acceptance": 0.6867830826668069,
+                  "error": 6.179325282573698e-07,
+                  "conditional_error": 8.997491986231117e-07
+                },
+                "standard_errors": {
+                  "acceptance": 2.00152666057579e-05,
+                  "error": 1.9350855660308666e-08,
+                  "conditional_error": 2.8176115268567308e-08
+                }
+              },
+              "absolute_differences": {
+                "estimates": {
+                  "acceptance": 4.440892098500626e-16,
+                  "error": 1.0587911840678754e-22,
+                  "conditional_error": 7.411538288475128e-22
+                },
+                "standard_errors": {
+                  "acceptance": 3.3881317890172014e-21,
+                  "error": 9.926167350636332e-24,
+                  "conditional_error": 3.3087224502121107e-23
+                }
+              },
+              "load": [
+                182.28564453125,
+                179.95263671875,
+                177.83642578125
+              ]
+            },
+            {
+              "seed": 20261029,
+              "order": [
+                1000000,
+                4194304,
+                50331648,
+                65536
+              ],
+              "wall_seconds": 0.5024721873924136,
+              "result": {
+                "status": "complete",
+                "requested": 536870912,
+                "completed": 536870912,
+                "seed": 20261029,
+                "offset": 0,
+                "batch_size": 4194304,
+                "devices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "shards": [
+                  {
+                    "device": 0,
+                    "offset": 0,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.47517234086990356
+                  },
+                  {
+                    "device": 1,
+                    "offset": 67108864,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.48530403431504965
+                  },
+                  {
+                    "device": 2,
+                    "offset": 134217728,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5016091363504529
+                  },
+                  {
+                    "device": 3,
+                    "offset": 201326592,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.475480024702847
+                  },
+                  {
+                    "device": 4,
+                    "offset": 268435456,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.48952777963131666
+                  },
+                  {
+                    "device": 5,
+                    "offset": 335544320,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4954759730026126
+                  },
+                  {
+                    "device": 6,
+                    "offset": 402653184,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.480131140910089
+                  },
+                  {
+                    "device": 7,
+                    "offset": 469762048,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.47153890039771795
+                  }
+                ],
+                "timings": {
+                  "total_seconds": 0.5024067610502243,
+                  "startup_seconds": 4.693865776062012e-06,
+                  "sampling_seconds": 0.5024020671844482
+                },
+                "estimates": {
+                  "acceptance": 0.6867890794528648,
+                  "error": 6.378395482897756e-07,
+                  "conditional_error": 9.287269809210054e-07
+                },
+                "standard_errors": {
+                  "acceptance": 2.0015164603289434e-05,
+                  "error": 2.0665258919575707e-08,
+                  "conditional_error": 3.0089705157058916e-08
+                }
+              },
+              "absolute_differences": {
+                "estimates": {
+                  "acceptance": 0.0,
+                  "error": 2.117582368135751e-22,
+                  "conditional_error": 2.117582368135751e-22
+                },
+                "standard_errors": {
+                  "acceptance": 3.3881317890172014e-21,
+                  "error": 3.308722450212111e-24,
+                  "conditional_error": 0.0
+                }
+              },
+              "load": [
+                183.22412109375,
+                180.18603515625,
+                177.92333984375
+              ]
+            },
+            {
+              "seed": 20261030,
+              "order": [
+                4194304,
+                50331648,
+                65536,
+                1000000
+              ],
+              "wall_seconds": 0.5415765298530459,
+              "result": {
+                "status": "complete",
+                "requested": 536870912,
+                "completed": 536870912,
+                "seed": 20261030,
+                "offset": 0,
+                "batch_size": 4194304,
+                "devices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "shards": [
+                  {
+                    "device": 0,
+                    "offset": 0,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5300048422068357
+                  },
+                  {
+                    "device": 1,
+                    "offset": 67108864,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.44417353346943855
+                  },
+                  {
+                    "device": 2,
+                    "offset": 134217728,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5168575262650847
+                  },
+                  {
+                    "device": 3,
+                    "offset": 201326592,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5168078849092126
+                  },
+                  {
+                    "device": 4,
+                    "offset": 268435456,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5361140770837665
+                  },
+                  {
+                    "device": 5,
+                    "offset": 335544320,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.5047981878742576
+                  },
+                  {
+                    "device": 6,
+                    "offset": 402653184,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4529478820040822
+                  },
+                  {
+                    "device": 7,
+                    "offset": 469762048,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3917060326784849
+                  }
+                ],
+                "timings": {
+                  "total_seconds": 0.5415163785219193,
+                  "startup_seconds": 4.735775291919708e-06,
+                  "sampling_seconds": 0.5415116427466273
+                },
+                "estimates": {
+                  "acceptance": 0.6867768933298066,
+                  "error": 6.03264197707176e-07,
+                  "conditional_error": 8.783990893786145e-07
+                },
+                "standard_errors": {
+                  "acceptance": 2.001537891388345e-05,
+                  "error": 1.8583455538893976e-08,
+                  "conditional_error": 2.705897644419759e-08
+                }
+              },
+              "absolute_differences": {
+                "estimates": {
+                  "acceptance": 0.0,
+                  "error": 0.0,
+                  "conditional_error": 0.0
+                },
+                "standard_errors": {
+                  "acceptance": 0.0,
+                  "error": 0.0,
+                  "conditional_error": 0.0
+                }
+              },
+              "load": [
+                183.22412109375,
+                180.18603515625,
+                177.92333984375
+              ]
+            }
+          ],
+          "median_seconds": 0.5415765298530459,
+          "min_seconds": 0.5024721873924136,
+          "max_seconds": 0.5798624455928802,
+          "shots_per_second": 991311259.6398467
+        },
+        {
+          "count": 8,
+          "batch_size": 50331648,
+          "memory": [
+            {
+              "device": 0,
+              "batch_size": 50331648,
+              "shots": 100663296,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 14813560832,
+              "peak_live_pool_bytes": 11425418240,
+              "peak_reserved_pool_bytes": 14398654976,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.5787479355931282
+            },
+            {
+              "device": 1,
+              "batch_size": 50331648,
+              "shots": 100663296,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 14813560832,
+              "peak_live_pool_bytes": 11425418240,
+              "peak_reserved_pool_bytes": 14398654976,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.5785860111936927
+            },
+            {
+              "device": 2,
+              "batch_size": 50331648,
+              "shots": 100663296,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 14813560832,
+              "peak_live_pool_bytes": 11425418240,
+              "peak_reserved_pool_bytes": 14398654976,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.5878549702465534
+            },
+            {
+              "device": 3,
+              "batch_size": 50331648,
+              "shots": 100663296,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 14813560832,
+              "peak_live_pool_bytes": 11425418240,
+              "peak_reserved_pool_bytes": 14398654976,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.6118399575352669
+            },
+            {
+              "device": 4,
+              "batch_size": 50331648,
+              "shots": 100663296,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 14813560832,
+              "peak_live_pool_bytes": 11425418240,
+              "peak_reserved_pool_bytes": 14398654976,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.5963090658187866
+            },
+            {
+              "device": 5,
+              "batch_size": 50331648,
+              "shots": 100663296,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 14813560832,
+              "peak_live_pool_bytes": 11425418240,
+              "peak_reserved_pool_bytes": 14398654976,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.5892687877640128
+            },
+            {
+              "device": 6,
+              "batch_size": 50331648,
+              "shots": 100663296,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 14813560832,
+              "peak_live_pool_bytes": 11425418240,
+              "peak_reserved_pool_bytes": 14398654976,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.6118645472452044
+            },
+            {
+              "device": 7,
+              "batch_size": 50331648,
+              "shots": 100663296,
+              "total_bytes": 25282281472,
+              "baseline_device_used": 418709504,
+              "peak_device_used": 14813560832,
+              "peak_live_pool_bytes": 11425418240,
+              "peak_reserved_pool_bytes": 14398654976,
+              "frame_words": 4,
+              "query_count": 2,
+              "feature_counts": [
+                56,
+                59
+              ],
+              "native_limit": 1000000,
+              "effective_limit": 50331648,
+              "probe_seconds": 0.5782911544665694
+            }
+          ],
+          "rounds": [
+            {
+              "seed": 20261028,
+              "order": [
+                65536,
+                1000000,
+                4194304,
+                50331648
+              ],
+              "wall_seconds": 0.4247211627662182,
+              "result": {
+                "status": "complete",
+                "requested": 536870912,
+                "completed": 536870912,
+                "seed": 20261028,
+                "offset": 0,
+                "batch_size": 50331648,
+                "devices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "shards": [
+                  {
+                    "device": 0,
+                    "offset": 0,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.38249543495476246
+                  },
+                  {
+                    "device": 1,
+                    "offset": 67108864,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.38347543124109507
+                  },
+                  {
+                    "device": 2,
+                    "offset": 134217728,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3836149759590626
+                  },
+                  {
+                    "device": 3,
+                    "offset": 201326592,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4030255936086178
+                  },
+                  {
+                    "device": 4,
+                    "offset": 268435456,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4240583870559931
+                  },
+                  {
+                    "device": 5,
+                    "offset": 335544320,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.39206971786916256
+                  },
+                  {
+                    "device": 6,
+                    "offset": 402653184,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.39621019922196865
+                  },
+                  {
+                    "device": 7,
+                    "offset": 469762048,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.38818426337093115
+                  }
+                ],
+                "timings": {
+                  "total_seconds": 0.4246585685759783,
+                  "startup_seconds": 5.273148417472839e-06,
+                  "sampling_seconds": 0.4246532954275608
+                },
+                "estimates": {
+                  "acceptance": 0.6867830826668069,
+                  "error": 6.179325282573712e-07,
+                  "conditional_error": 8.997491986231137e-07
+                },
+                "standard_errors": {
+                  "acceptance": 2.00152666057579e-05,
+                  "error": 1.9350855660308666e-08,
+                  "conditional_error": 2.8176115268567308e-08
+                }
+              },
+              "absolute_differences": {
+                "estimates": {
+                  "acceptance": 4.440892098500626e-16,
+                  "error": 1.2705494208814505e-21,
+                  "conditional_error": 1.2705494208814505e-21
+                },
+                "standard_errors": {
+                  "acceptance": 3.3881317890172014e-21,
+                  "error": 9.926167350636332e-24,
+                  "conditional_error": 3.3087224502121107e-23
+                }
+              },
+              "load": [
+                182.28564453125,
+                179.95263671875,
+                177.83642578125
+              ]
+            },
+            {
+              "seed": 20261029,
+              "order": [
+                1000000,
+                4194304,
+                50331648,
+                65536
+              ],
+              "wall_seconds": 0.4041464375331998,
+              "result": {
+                "status": "complete",
+                "requested": 536870912,
+                "completed": 536870912,
+                "seed": 20261029,
+                "offset": 0,
+                "batch_size": 50331648,
+                "devices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "shards": [
+                  {
+                    "device": 0,
+                    "offset": 0,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3838597824797034
+                  },
+                  {
+                    "device": 1,
+                    "offset": 67108864,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.38332400284707546
+                  },
+                  {
+                    "device": 2,
+                    "offset": 134217728,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.38345883041620255
+                  },
+                  {
+                    "device": 3,
+                    "offset": 201326592,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3812894197180867
+                  },
+                  {
+                    "device": 4,
+                    "offset": 268435456,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3824452869594097
+                  },
+                  {
+                    "device": 5,
+                    "offset": 335544320,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.38487768452614546
+                  },
+                  {
+                    "device": 6,
+                    "offset": 402653184,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.4033681396394968
+                  },
+                  {
+                    "device": 7,
+                    "offset": 469762048,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.38226847909390926
+                  }
+                ],
+                "timings": {
+                  "total_seconds": 0.40409101638942957,
+                  "startup_seconds": 5.424953997135162e-06,
+                  "sampling_seconds": 0.40408559143543243
+                },
+                "estimates": {
+                  "acceptance": 0.6867890794528649,
+                  "error": 6.378395482897771e-07,
+                  "conditional_error": 9.287269809210073e-07
+                },
+                "standard_errors": {
+                  "acceptance": 2.001516460328943e-05,
+                  "error": 2.0665258919575704e-08,
+                  "conditional_error": 3.00897051570589e-08
+                }
+              },
+              "absolute_differences": {
+                "estimates": {
+                  "acceptance": 1.1102230246251565e-16,
+                  "error": 1.2705494208814505e-21,
+                  "conditional_error": 1.6940658945086007e-21
+                },
+                "standard_errors": {
+                  "acceptance": 0.0,
+                  "error": 6.617444900424222e-24,
+                  "conditional_error": 1.3234889800848443e-23
+                }
+              },
+              "load": [
+                183.22412109375,
+                180.18603515625,
+                177.92333984375
+              ]
+            },
+            {
+              "seed": 20261030,
+              "order": [
+                4194304,
+                50331648,
+                65536,
+                1000000
+              ],
+              "wall_seconds": 0.39589479845017195,
+              "result": {
+                "status": "complete",
+                "requested": 536870912,
+                "completed": 536870912,
+                "seed": 20261030,
+                "offset": 0,
+                "batch_size": 50331648,
+                "devices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "shards": [
+                  {
+                    "device": 0,
+                    "offset": 0,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3842498967424035
+                  },
+                  {
+                    "device": 1,
+                    "offset": 67108864,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3832933194935322
+                  },
+                  {
+                    "device": 2,
+                    "offset": 134217728,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.38334553595632315
+                  },
+                  {
+                    "device": 3,
+                    "offset": 201326592,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3825621595606208
+                  },
+                  {
+                    "device": 4,
+                    "offset": 268435456,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3841053256765008
+                  },
+                  {
+                    "device": 5,
+                    "offset": 335544320,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.3950249459594488
+                  },
+                  {
+                    "device": 6,
+                    "offset": 402653184,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.38427559472620487
+                  },
+                  {
+                    "device": 7,
+                    "offset": 469762048,
+                    "shots": 67108864,
+                    "sampling_seconds": 0.38270165398716927
+                  }
+                ],
+                "timings": {
+                  "total_seconds": 0.39582902751863003,
+                  "startup_seconds": 6.086193025112152e-06,
+                  "sampling_seconds": 0.3958229413256049
+                },
+                "estimates": {
+                  "acceptance": 0.6867768933298066,
+                  "error": 6.032641977071775e-07,
+                  "conditional_error": 8.783990893786166e-07
+                },
+                "standard_errors": {
+                  "acceptance": 2.0015378913883445e-05,
+                  "error": 1.8583455538893976e-08,
+                  "conditional_error": 2.705897644419759e-08
+                }
+              },
+              "absolute_differences": {
+                "estimates": {
+                  "acceptance": 0.0,
+                  "error": 1.4823076576950256e-21,
+                  "conditional_error": 2.117582368135751e-21
+                },
+                "standard_errors": {
+                  "acceptance": 3.3881317890172014e-21,
+                  "error": 0.0,
+                  "conditional_error": 0.0
+                }
+              },
+              "load": [
+                184.72802734375,
+                180.54833984375,
+                178.052734375
+              ]
+            }
+          ],
+          "median_seconds": 0.4041464375331998,
+          "min_seconds": 0.39589479845017195,
+          "max_seconds": 0.4247211627662182,
+          "shots_per_second": 1328406889.5346806
+        }
+      ]
+    }
+  ],
+  "numpy": "2.1.3",
+  "finished_at": "2026-10-28T06:14:37.197428+00:00",
+  "final_inventory": "index, uuid, name, driver_version, utilization.gpu [%], memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz]\n0, GPU-3f8ed462-3253-7104-718a-d52f4a72edb7, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 492 MiB, 28, 14.64 W, 210 MHz\n1, GPU-dcc6c0f3-8264-0b63-199b-2b4d7d38cd2f, NVIDIA GeForce RTX 4090, 560.35.03, 4 %, 2 MiB, 38, 63.66 W, 2520 MHz\n2, GPU-7847678f-2289-08d7-ecc1-7ba5ae47ef34, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 39, 74.29 W, 2730 MHz\n3, GPU-25f53d69-f560-09f7-175b-09f973b4e12a, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 39, 65.79 W, 2715 MHz\n4, GPU-3d67034a-59a7-b162-eee8-a3e6101cbe95, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 39, 76.63 W, 585 MHz\n5, GPU-4adedae3-0eaf-99a5-8c75-4cec0616068d, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 39, 76.95 W, 2730 MHz\n6, GPU-747a9db3-132e-7612-72bf-eff539d02fe9, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 38, 83.14 W, 2700 MHz\n7, GPU-d3877180-08d1-ba1e-02ef-a78253f531bd, NVIDIA GeForce RTX 4090, 560.35.03, 53 %, 2 MiB, 41, 70.73 W, 2670 MHz\n8, GPU-c5f989b3-f417-19a2-1a18-562f041a2e05, NVIDIA GeForce RTX 4090, 560.35.03, 0 %, 2 MiB, 39, 71.38 W, 540 MHz"
+}
