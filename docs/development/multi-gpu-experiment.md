@@ -23,9 +23,9 @@ interruptions and optional wall-time deadlines. A failed run closes the pool and
 raises without publishing a partial estimate. Empty shards start no processes.
 The implementation supports one host, static splitting and the task subset of #5.
 
-## Server preflight on 2026-10-28
+## Initial server preflight on 2026-10-28
 
-Only read-only SSH inspection was performed on `ghz`. Contrary to the expected
+At the initial preflight, only read-only SSH inspection was performed on `ghz`. Contrary to the expected
 eight devices, `nvidia-smi` enumerated nine RTX 4090 GPUs, indices 0 through 8.
 GPU 0 reported 492 MiB used; the compute-process query reported PID 866579 using
 482 MiB, even though device utilization was 0% and the default process table was
@@ -37,9 +37,11 @@ the server. The GPU context was sufficient to skip the experiment. No environmen
 was installed, no task was copied and no sampling was started on `ghz`. No attempt
 was made to use the remaining idle devices or terminate the existing process.
 
-**Real multi-GPU correctness, throughput and 1/2/4/8-card scaling remain unverified.**
-CPU-reference tests do not establish device isolation, CUDA runtime compatibility,
-GPU memory consumption or speedup on that server.
+The user subsequently authorized experiments on the idle devices and requested
+four GPUs first. The [four-GPU experiment report](four-gpu-benchmark-20261028.md)
+records successful real-device correctness tests and direct-single-GPU versus
+four-GPU measurements on physical GPUs 1 through 4. Two- and eight-GPU scaling
+remain unmeasured. The initial skip above describes the earlier preflight only.
 
 ## Local validation
 

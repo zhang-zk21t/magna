@@ -1,0 +1,40 @@
+OS                           : Linux-5.15.0-187-generic-x86_64-with-glibc2.35
+Python Version               : 3.13.5
+CuPy Version                 : 14.2.0
+CuPy Platform                : NVIDIA CUDA
+NumPy Version                : 2.1.3
+SciPy Version                : 1.15.3
+Cython Build Version         : 3.2.4
+Cython Runtime Version       : None
+CUDA Root                    : /usr/local/cuda-12.6/targets/x86_64-linux
+NVCC PATH                    : /usr/local/cuda-12.6/bin/nvcc
+CUDA Build Version           : 12090
+CUDA Driver Version          : 12060
+CUDA Runtime Version         : 12090 (linked to CuPy) / 12060 (locally installed)
+CUDA Extra Include Dirs      : ['/usr/local/cuda-12.6/include']
+cuBLAS Version               : (available)
+cuFFT Version                : 11206
+cuRAND Version               : 10307
+cuSOLVER Version             : (11, 6, 4)
+cuSPARSE Version             : (available)
+NVRTC Version                : (12, 6)
+Thrust Version               : 300102
+CUB Build Version            : 300102
+Jitify Build Version         : <unknown>
+NCCL Build Version           : (not loaded; try `import cupy.cuda.nccl` first)
+NCCL Runtime Version         : (not loaded; try `import cupy.cuda.nccl` first)
+cuTENSOR Version             : None
+cuSPARSELt Build Version     : None
+Device 0 Name                : NVIDIA GeForce RTX 4090
+Device 0 Compute Capability  : 89
+Device 0 PCI Bus ID          : 0000:52:00.0
+Device 1 Name                : NVIDIA GeForce RTX 4090
+Device 1 Compute Capability  : 89
+Device 1 PCI Bus ID          : 0000:53:00.0
+Device 2 Name                : NVIDIA GeForce RTX 4090
+Device 2 Compute Capability  : 89
+Device 2 PCI Bus ID          : 0000:57:00.0
+Device 3 Name                : NVIDIA GeForce RTX 4090
+Device 3 Compute Capability  : 89
+Device 3 PCI Bus ID          : 0000:CE:00.0
+28
