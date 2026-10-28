@@ -76,6 +76,41 @@ eight-GPU change are inconclusive at this level of variation.
 | rp2-d5 / 65,536 | 7.559 [7.409, 11.192] | 2.076 [1.788, 2.388] |
 | rp2-d5 / 524,288 | 6.880 [5.756, 8.571] | 1.209 [1.037, 1.292] |
 
+## Throughput relative to the serial CPU API
+
+The following is a **derived throughput ratio**, combining the confirmed
+eight-GPU rates above with the previously measured single-process,
+single-threaded `magna.run` CPU rates. It is not a newly measured equal-shot
+end-to-end speedup, nor a comparison against all cores in one CPU socket.
+Both datasets use implementation `d128490`, the same circuits, task options
+and physical/importance sampling configurations.
+
+The calculation is `(GPU draws / GPU median wall time) / (CPU draws / CPU
+median wall time)`. CPU rates come from five 262,144-draw runs per task in the
+[CPU raw results](benchmark-results/cpu-eight-gpu-20261028-results.json), measured
+at 12:31–12:41 Asia/Shanghai. GPU rates come from the confirmation above at
+14:18–14:24, using 53,477,376–536,870,912 draws per run. Both exclude initial
+compilation and worker startup. The sessions have different shared-host loads;
+these ratios describe observed rates, not guaranteed speedups for an equal-sized
+job or a dedicated machine. No new CPU measurements were taken for this table.
+
+| Task | Serial CPU draws/s | Selected eight-GPU million draws/s | Eight-GPU / CPU throughput ratio |
+| --- | ---: | ---: | ---: |
+| bh2-T | 31,467 | 952.30 | approximately 30,264x |
+| bh100-T | 2,981 | 36.82 | approximately 12,353x |
+| color3 | 35,701 | 1,317.66 | approximately 36,908x |
+| rp2-d5 | 29,144 | 267.08 | approximately 9,164x |
+
+The color3 row uses the experimental batch 50,331,648. At the public API's
+1,000,000 batch, its corresponding ratio is approximately **31,195x** instead.
+The other selected batches are within the existing public limit.
+
+The earlier **equal-work** CPU/eight-GPU experiment used 262,144 draws in both
+modes and measured 1,219x, 3,252x, 1,146x and 836x respectively. Those results
+remain valid for that smaller workload. The larger rate ratios above also
+reflect amortizing dispatch and launch costs over far more GPU draws, so they
+must not be described as improvements due to batch tuning alone.
+
 ## Memory sweep
 
 The first sweep tested batches 65,536, 131,072, 262,144, 524,288 and 1,000,000,
